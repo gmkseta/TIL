@@ -44,11 +44,11 @@ cover: "2021-04-01-03-27-27.png"
 # the_m_word/introspection.rb
 class Greeting
   def initialize(text)
-		@text = text
-	end
+    @text = text
+  end
   def welcome
     @text
-	end
+  end
 end
 ```
 
@@ -59,7 +59,7 @@ my_object = Greeting.new("Hello")
 - `Greeting` 클래스를 정의하고 객체를 만들었다.
 
 ```ruby
-my_object.class 														# => Greeting
+my_object.class                             # => Greeting
 ```
 
 - `my_object` 에게 클래스가 뭐냐고 물어보면 확실하게 `Greeting 이다~~~` 라고 답해줌
@@ -103,13 +103,13 @@ class Entity
     @table = table
     @ident = ident
     Database.sql "INSERT INTO #{@table} (id) VALUES (#{@ident})"
-	end
+  end
   def set(col, val)
     Database.sql "UPDATE #{@table} SET #{col}='#{val}' WHERE id=#{@ident}"
-	end
+  end
   def get(col)
     Database.sql ("SELECT #{col} FROM #{@table} WHERE id=#{@ident}")[0][0]
-	end
+  end
 end
 ```
 
@@ -124,16 +124,16 @@ class Movie < Entity
   end
   def title
     get "title"
-	end
+  end
   def title=(value)
     set "title", value
-	end
+  end
   def director
     get "director"
-	end
+  end
   def director=(value)
     set "director", value
-	end
+  end
 end
 
 ```
@@ -233,15 +233,8 @@ movie.title  # => "Doctor Strangelove"
 
 **만약 고급 루비 코딩의 길을 가고싶다면 .... !**
 
-
-
 ## 사견
 
-* 아직까진 쉬운 내용
+- 아직까진 쉬운 내용
 
-* 다른 orm들도 메타프로그래밍을 쓰는 것으로 알고 있다.
-
-  
-
-  
-
+- 다른 orm들도 메타프로그래밍을 쓰는 것으로 알고 있다.

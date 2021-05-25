@@ -194,8 +194,8 @@ irb(main):001:0> [].methods.grep /^replace/
 ```ruby
 class MyClass
   def my_method
-		@val = 1
-	end
+    @val = 1
+  end
 end
 obj = MyClass.new
 obj.class #=> Myclass
@@ -306,10 +306,10 @@ end end
 
 ![](2021-04-08-10-11-34.png)
 
-* 모든 상수는 파일 시스템과 유사한 트리에 배열되어 있다
-* 모듈, 클래스는 디렉터리이고 상수는 파일임
-* 동일한 이름을 가진 여러 파일을 가질 수 있다
-* 파일 처럼 상수를 경로로 나타낼 수도 있다.
+- 모든 상수는 파일 시스템과 유사한 트리에 배열되어 있다
+- 모듈, 클래스는 디렉터리이고 상수는 파일임
+- 동일한 이름을 가진 여러 파일을 가질 수 있다
+- 파일 처럼 상수를 경로로 나타낼 수도 있다.
 
 #### The Paths of Constants
 
@@ -327,9 +327,9 @@ end
 M::C::X # => "a constant"
 ```
 
-* 모듈 클래스도 인스턴스 메서드 클래스 메서드를 제공하고 이 둘을 constants라고 부른다.
-* `Modules#constants` 는 현재 스코프의 모든 상수를 반환한다.
-* `Module.constants`는 최상위 상수들을 반환한다.
+- 모듈 클래스도 인스턴스 메서드 클래스 메서드를 제공하고 이 둘을 constants라고 부른다.
+- `Modules#constants` 는 현재 스코프의 모든 상수를 반환한다.
+- `Module.constants`는 최상위 상수들을 반환한다.
 
 ```ruby
 M.constants                        # => [:C]
@@ -337,15 +337,15 @@ Module.constants.include? :Object  # => true
 Module.constants.include? :Module  # => true
 ```
 
-* `Module.nesting`  으로는 current path를 얻을 수 있다.
+- `Module.nesting` 으로는 current path를 얻을 수 있다.
 
 루비의 상수와 파일 간의 유사성은 더 나아가 파일을 정리할 때 디렉토리를 사용하는 것과 마찬가지로 모듈을 사용하여 상수를 구성할 수 있다.
 
 #### The Rake Example
 
-* 루비의 빌드 시스템 `Rake` 의 초기 버전은 `Task`, `FileTask` 와 같이 명확한 이름의 클래스를 정의했다.
-* 다른 라이브러리들과 충돌 할 가능성이 높았다.
-* `Rake`내의 모듈에서 다음처럼 클래스를 정의하는 것으로 전환하였다.
+- 루비의 빌드 시스템 `Rake` 의 초기 버전은 `Task`, `FileTask` 와 같이 명확한 이름의 클래스를 정의했다.
+- 다른 라이브러리들과 충돌 할 가능성이 높았다.
+- `Rake`내의 모듈에서 다음처럼 클래스를 정의하는 것으로 전환하였다.
 
 [lib/rake/task.rb](https://github.com/ruby/rake/blob/master/lib/rake/task.rb)
 
@@ -358,9 +358,9 @@ module Rake
 
 ```
 
-* 이제 Task의 이름은 `Rake::Task` 이고 이제 다른 라이브러리와 충돌하지 않을 것이다.
-* `Rake` 같은 모듈 중 상수의 구성 요소로만 존재하는 모듈을 **네임스페이스**라고 한다.
-* 이전 버전에 대한 대응
+- 이제 Task의 이름은 `Rake::Task` 이고 이제 다른 라이브러리와 충돌하지 않을 것이다.
+- `Rake` 같은 모듈 중 상수의 구성 요소로만 존재하는 모듈을 **네임스페이스**라고 한다.
+- 이전 버전에 대한 대응
 
 ```ruby
 Task = Rake::Task
@@ -368,14 +368,14 @@ FileTask = Rake::FileTask
 FileCreationTask = Rake::FileCreationTask
 ```
 
-* 위 처럼 대응하고 사용자가 모두 마이그레이션 했다고 생각 되었을 때 옵션을 나중에 제거
+- 위 처럼 대응하고 사용자가 모두 마이그레이션 했다고 생각 되었을 때 옵션을 나중에 제거
 
 ### Objects and Classes Wrap-Up
 
-* 객체란 무엇인가? - 인스턴스 변수와 클래스에 대한 링크이다.
-* 클래스란 무엇인가? - 객체와 인스턴스 메소드 목록 및 슈퍼클래스에 대한 링크이다.
-  * 클래스는 모듈의 하위클래스이므로 클래스도 모듈이다.
-  * 다른 객체들과 마찬가지로 클래스에는 메서드가 있고, 클래스(클래스 이름!)에 대한 상수 참조가 이미 있다.
+- 객체란 무엇인가? - 인스턴스 변수와 클래스에 대한 링크이다.
+- 클래스란 무엇인가? - 객체와 인스턴스 메소드 목록 및 슈퍼클래스에 대한 링크이다.
+  - 클래스는 모듈의 하위클래스이므로 클래스도 모듈이다.
+  - 다른 객체들과 마찬가지로 클래스에는 메서드가 있고, 클래스(클래스 이름!)에 대한 상수 참조가 이미 있다.
 
 ### Using Namespaces
 
@@ -385,24 +385,22 @@ class Text
   # Type Error: Text is not a class
 ```
 
-* `Action Mailer` 에서 `Text` 라는 모듈 이름을 쓰고있다.
-* 따라서 다음처럼 변경하여 사용
+- `Action Mailer` 에서 `Text` 라는 모듈 이름을 쓰고있다.
+- 따라서 다음처럼 변경하여 사용
 
 ```ruby
 module Hello
   class Text
 ```
 
-
-
 ## What Happens When You Call a Method?
 
 ### Method Lookup
 
-* 수신자 ( receiver ) 와 조상 ( ancestors )의 chain
-* 수신자는 메서드를 호출하는 객체이다.
-  * `my_string.reverse()` 라면 `my_string` 이 수신자
-* ancestors chain은 superclass로 타고 올라가는 경로
+- 수신자 ( receiver ) 와 조상 ( ancestors )의 chain
+- 수신자는 메서드를 호출하는 객체이다.
+  - `my_string.reverse()` 라면 `my_string` 이 수신자
+- ancestors chain은 superclass로 타고 올라가는 경로
 
 ```ruby
 class MyClass
@@ -414,20 +412,20 @@ obj = MySubclass.new
 obj.my_method()       # => "my_method()"
 ```
 
-* `my_method()`를 호출하면 수신자인 `obj` 에서 `MySubclass` 로 바로 들어간다.
-* `my_method()`를 찾을 수 없으므로 `MyClass`  로 올라가서 찾고 그곳에서 `my_method()` ㄹㅡㄹ 찾을 수 있다.
-* `MyClass`  는 superclass를 지정하지 않으므로 기본 superclass에서 암시적으로 상속된다.
-* 만약 `MyClass` 에서도 못찾았으면 `Object` , `BasicObject` 로 체인을 올려서 메서드를 찾을 것 이다.
+- `my_method()`를 호출하면 수신자인 `obj` 에서 `MySubclass` 로 바로 들어간다.
+- `my_method()`를 찾을 수 없으므로 `MyClass` 로 올라가서 찾고 그곳에서 `my_method()` ㄹㅡㄹ 찾을 수 있다.
+- `MyClass` 는 superclass를 지정하지 않으므로 기본 superclass에서 암시적으로 상속된다.
+- 만약 `MyClass` 에서도 못찾았으면 `Object` , `BasicObject` 로 체인을 올려서 메서드를 찾을 것 이다.
 
 ```ruby
 MySubclass.ancestors # => [MySubclass, MyClass, Object, Kernel, BasicObject]
 ```
 
-* `Kernel` 은 모듈이겠지 뭐
+- `Kernel` 은 모듈이겠지 뭐
 
 ### Modules and Lookup
 
-* `include` 를 통해서 클래스를 모듈에 포함시킬 수 있다.
+- `include` 를 통해서 클래스를 모듈에 포함시킬 수 있다.
 
 ```ruby
 module M1
@@ -441,7 +439,7 @@ class D < C; end
 D.ancestors # => [D, C, M1, Object, Kernel, BasicObject]
 ```
 
-* `prepend` 를 통해서 아래에 모듈을 포함 시킬수도 있다.
+- `prepend` 를 통해서 아래에 모듈을 포함 시킬수도 있다.
 
 ```ruby
 class C2
@@ -451,7 +449,7 @@ class D2 < C2; end
 D2.ancestors # => [D2, M2, C2, Object, Kernel, BasicObject]
 ```
 
-* 만약 모듈을 여러 번 동일한 조상 체인에 포함하려고 하면?
+- 만약 모듈을 여러 번 동일한 조상 체인에 포함하려고 하면?
 
 ```ruby
 module M1; end
@@ -465,19 +463,19 @@ end
 M3.ancestors # => [M1, M3, M2]
 ```
 
-* `M3` 에서 prepend를 먼저 하고 이후에 M2를 추가하지만 이미 M1이 조상들의 사슬에 있기 때문에 포함되지 않는다.
+- `M3` 에서 prepend를 먼저 하고 이후에 M2를 추가하지만 이미 M1이 조상들의 사슬에 있기 때문에 포함되지 않는다.
 
 ### The Kernel
 
-* 루비에는 print 같은 메서드가 있어 어느 곳에서나 호출이 가능하다.
+- 루비에는 print 같은 메서드가 있어 어느 곳에서나 호출이 가능하다.
 
 ```ruby
 Kernel.private_instance_methods.grep(/^pr/) # => [:printf, :print, :proc]
 ```
 
-*  `Object` 클래스가  `Kernel`을  포함하므로 커널은 모든 오브젝트의 상위 체인에 들어간다.
-* 따라서 Ruby의 모든 줄은 항상 `Object` 안에서 실행되므로 `Kernel` 의 인스턴스 메서드를 호출할 수 있다.
-* 므찌다, 이런 커널 메서드가 실제로 유용하다는 것을 증명하기 위해 일부 라이브러리 살펴보자
+- `Object` 클래스가 `Kernel`을 포함하므로 커널은 모든 오브젝트의 상위 체인에 들어간다.
+- 따라서 Ruby의 모든 줄은 항상 `Object` 안에서 실행되므로 `Kernel` 의 인스턴스 메서드를 호출할 수 있다.
+- 므찌다, 이런 커널 메서드가 실제로 유용하다는 것을 증명하기 위해 일부 라이브러리 살펴보자
 
 #### The Awesome Print Example
 
@@ -487,7 +485,7 @@ require "awesome_print"
   ap local_time, :indent => 2
 ```
 
-* 어디서든 `ap` 를 부를 수 있다.
+- 어디서든 `ap` 를 부를 수 있다.
 
 [lib/awesome_print/core_ext/kernel.rb](https://github.com/awesome-print/awesome_print/blob/master/lib/awesome_print/core_ext/kernel.rb)
 
@@ -502,10 +500,10 @@ end
 
 ### Method Execution
 
-* 메서드를 호출하면 루비든 두 가지 일을 한다.
+- 메서드를 호출하면 루비든 두 가지 일을 한다.
   1. 메서드 찾기
   2. 실행하기
-* my_method를 실행했다고 해보자
+- my_method를 실행했다고 해보자
 
 ```ruby
 def my_method
@@ -514,15 +512,15 @@ def my_method
 end
 ```
 
-* 인스턴스 변수 @x가 속한 객체는 뭘까?
-* 어떤 객체의 my_other_method 를 불러야 할까?
-* 직관적으로 모두 수신자에 속한다는걸 알 수 있다. 
-* 하지만 루비는 직관이 없으므로 수신자에 대한 참조를 넣어둔다.
+- 인스턴스 변수 @x가 속한 객체는 뭘까?
+- 어떤 객체의 my_other_method 를 불러야 할까?
+- 직관적으로 모두 수신자에 속한다는걸 알 수 있다.
+- 하지만 루비는 직관이 없으므로 수신자에 대한 참조를 넣어둔다.
 
 #### The Self Keyword
 
-* 루비 코드의 모든 줄은 오브젝트 안에서 실행된다. ( current object 라고 함)
-* current object는 또한 `self` 로 불리기도 한다. 우리가 `self` 로 접근이 가능함
+- 루비 코드의 모든 줄은 오브젝트 안에서 실행된다. ( current object 라고 함)
+- current object는 또한 `self` 로 불리기도 한다. 우리가 `self` 로 접근이 가능함
 
 ```ruby
 class MyClass
@@ -533,18 +531,18 @@ class MyClass
 end
   def my_method
     @var = @var + 1
-	end 
+  end
 end
 obj = MyClass.new
 obj.testing_self  # => #<MyClass:0x007f93ab08a728 @var=11>
 ```
 
-* `testing_self` 를 호출하는 순간 obj는 self가 된다.
-* @var는 obj의 인스턴스 변수이며 my_method는 obj에서 호출 된다.
-* 마지막으로 self에 대한 참조를 반환한다.
-* 따라서 루비를 잘 쓰려면 주어진 순간에 어떤 객체가 self인지를 항상 알아야 한다.
-* 어떤 객체가 마지막 메서드 수신자인지 추적 하기만 하면 된다.
-* 하지만 두가지 특별한 경우가 있음!
+- `testing_self` 를 호출하는 순간 obj는 self가 된다.
+- @var는 obj의 인스턴스 변수이며 my_method는 obj에서 호출 된다.
+- 마지막으로 self에 대한 참조를 반환한다.
+- 따라서 루비를 잘 쓰려면 주어진 순간에 어떤 객체가 self인지를 항상 알아야 한다.
+- 어떤 객체가 마지막 메서드 수신자인지 추적 하기만 하면 된다.
+- 하지만 두가지 특별한 경우가 있음!
 
 #### The Top Level
 
@@ -555,10 +553,10 @@ self        # => main
 self.class  # => Object
 ```
 
-* 루비 프로그램을 시작하자 마자 루비의 인터프리터는 `Main`이라는 이름의 오브젝트 안에 우리를 위치시킨다.
-* 이 오브젝트를 최상위 컨텍스트라고 부른다.
-  * 콜 스텍의 최상위 레벨에 있는 오브젝트이므로
-  * 아직 메서드를 호출하지 않았거나 모든 메서드가 반환되었다.
+- 루비 프로그램을 시작하자 마자 루비의 인터프리터는 `Main`이라는 이름의 오브젝트 안에 우리를 위치시킨다.
+- 이 오브젝트를 최상위 컨텍스트라고 부른다.
+  - 콜 스텍의 최상위 레벨에 있는 오브젝트이므로
+  - 아직 메서드를 호출하지 않았거나 모든 메서드가 반환되었다.
 
 #### Class Definitions and self
 
@@ -570,13 +568,13 @@ end
 
 요약하자면
 
-* 메서드를 호출하면 루비가 규칙에 따라 메소드를 조회한 뒤 수신자를 self로 두고 메서드를 실행한다.
-*  몇 가지 특별한
-*  경우( 모듈 포함 ) 가 있지만 예외는 없다. (하나를 제외하고)
+- 메서드를 호출하면 루비가 규칙에 따라 메소드를 조회한 뒤 수신자를 self로 두고 메서드를 실행한다.
+- 몇 가지 특별한
+- 경우( 모듈 포함 ) 가 있지만 예외는 없다. (하나를 제외하고)
 
 ### Refinenments
 
-* 이번 장 초반의 부분을 기억하는가?
+- 이번 장 초반의 부분을 기억하는가?
 
 ```ruby
 class String
@@ -586,31 +584,31 @@ class String
 end
 ```
 
-* 이 변경사항은 전역적이라는 문제가 있다.
-* 모든 String 이 영향을 받고, 호환이 되지 않는 Monkeypatch라면 - `Array#replace` 과 같은
-* `Refindement` 를 통해 해결이 가능하다.
+- 이 변경사항은 전역적이라는 문제가 있다.
+- 모든 String 이 영향을 받고, 호환이 되지 않는 Monkeypatch라면 - `Array#replace` 과 같은
+- `Refindement` 를 통해 해결이 가능하다.
 
 ```ruby
 module StringExtensions
     refine String do
       def to_alphanumeric
         gsub(/[^\w\s]/, '')
-			end 
+      end
     end
 end
 ```
 
-* `"my *1st* refinement!".to_alphanumeric` 
-  * => `NoMethodError: undefined method 'to_alphanumeric' [...]`
-* using method를 사용해서 변경을 적용한다.
-* `using StringExtensions`
+- `"my *1st* refinement!".to_alphanumeric`
+  - => `NoMethodError: undefined method 'to_alphanumeric' [...]`
+- using method를 사용해서 변경을 적용한다.
+- `using StringExtensions`
 
 ```ruby
 module StringExtensions
   refine String do
     def reverse
       "esrever"
-		end 
+    end
   end
 end
 module StringStuff
@@ -622,8 +620,8 @@ end
 # => "gnirts_ym"
 ```
 
-* Refinement는 Monkeypatches 같지만 전역적이진 않다.
-* 그러면서 일반적으로 오픈 클래스가 할 수 있는 모든 작업이 가능하다.
+- Refinement는 Monkeypatches 같지만 전역적이진 않다.
+- 그러면서 일반적으로 오픈 클래스가 할 수 있는 모든 작업이 가능하다.
 
 #### Refinement Gotchas
 
@@ -631,16 +629,16 @@ end
 class MyClass
   def my_method
     "original my_method()"
-	end
+  end
   def another_method
     my_method
-	end 
+  end
 end
 module MyClassRefinement
   refine MyClass do
     def my_method
       "refined my_method()"
-		end 
+    end
   end
 end
 using MyClassRefinement
@@ -649,30 +647,21 @@ MyClass.new.another_method  # =>  "original my_method()"
 
 ```
 
-* `MyClass.new.my_method` 의 호출은 using 이후지만
-* `MyClass` 의 인스턴스 메서드 `my_method` 의 호출은 using 이전이므로 ...
-* 직관에 조금 어긋나는 것 같다..
-* 일반 모듈에서 refine을 사용할 수 있지만 클래스 자체가 모듈인 경우에 클래스에서 이를 호출할 수 없다.
-* 또한 메서드나 조상을 아예 무시해버린다.
-* 이런 동작은 타당한 기술적 정당성을 갖고 있지만 꽤나 어렵다..
-* refine은 몽키 패치를 제거할 수 있지만 잘 사용하는 방법을 이해하는 것은 시간이 걸린다.
+- `MyClass.new.my_method` 의 호출은 using 이후지만
+- `MyClass` 의 인스턴스 메서드 `my_method` 의 호출은 using 이전이므로 ...
+- 직관에 조금 어긋나는 것 같다..
+- 일반 모듈에서 refine을 사용할 수 있지만 클래스 자체가 모듈인 경우에 클래스에서 이를 호출할 수 없다.
+- 또한 메서드나 조상을 아예 무시해버린다.
+- 이런 동작은 타당한 기술적 정당성을 갖고 있지만 꽤나 어렵다..
+- refine은 몽키 패치를 제거할 수 있지만 잘 사용하는 방법을 이해하는 것은 시간이 걸린다.
 
 ## Wrap Up!
 
-* 객체는 인스턴스 변수와 클래스에 대한 링크로 구성된다.
-* 객체의 메서드는 객체의 클래스에 존재한다.
-* 클래스는 Class클래스의 오브젝트일 뿐이다.
-  * 클래스의 이름은 그냥 상수임
-  * 클래스는 모듈을 상속받는다.
-* 상수는 파일 시스템과 유사하게 트리에 배열되어 있다.
-  * 모듈과 클래스의 이름은 디렉터리, 상수는 파일
-* 클래스에는 클래스에서 시작하여 BasicObject로 올라가는 조상 체인이 있음
-
-
-
-
-
-
-
-
-
+- 객체는 인스턴스 변수와 클래스에 대한 링크로 구성된다.
+- 객체의 메서드는 객체의 클래스에 존재한다.
+- 클래스는 Class클래스의 오브젝트일 뿐이다.
+  - 클래스의 이름은 그냥 상수임
+  - 클래스는 모듈을 상속받는다.
+- 상수는 파일 시스템과 유사하게 트리에 배열되어 있다.
+  - 모듈과 클래스의 이름은 디렉터리, 상수는 파일
+- 클래스에는 클래스에서 시작하여 BasicObject로 올라가는 조상 체인이 있음
