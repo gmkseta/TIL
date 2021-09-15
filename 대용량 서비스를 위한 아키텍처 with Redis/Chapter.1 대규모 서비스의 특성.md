@@ -62,9 +62,87 @@
 * 모니터링 - Monitoring
   * 서비스 상태는 항상 모니터링 되어야 한다.
 
-
-
 # 2. 실습
+
+여러명이서 작업할때 state를 s3에 저장을 한다? 호우
+
+
+
+```
+terraform init
+terraform plan -out "output"
+terraform apply "output"
+```
+
+
+
+spot은 비용은 싸지만? - 한두시간 쓰면 사라질 수 있다.
+
+
+
+* terraform 에서 나온 public ip / private ip로 create_hosts.py 변경해서 실행
+
+* geoip 부분 아웃풋을 aws/hosts에 넣어둔다
+
+geoip는 자동으로 `https://github.com/charsyam/geoip.git`  얘를 갖고와서 띄운다??
+
+gunicorn으로 파이썬 어플리케이션을 띄워준다.
+
+* ```
+  ansible-playbook -i aws the_red_1_base.yml       
+  ```
+
+  * role에 따라서 뭐가 많이 만들어둔 듯
+
+  * ```yaml
+    ---
+    - name: Configure users on all servers
+      hosts: all
+      become: yes
+    
+      roles:
+         - { role: base, tags: [ 'base' ] }
+         - { role: docker, tags: [ 'docker' ] }
+         - { role: locust, tags: [ 'locust' ] }
+         - { role: prometheus_node_exporter, tags: [ 'prometheus_node_exporter' ] }
+         - { role: pyenv, tags: [ 'pyenv' ] }
+    
+    ```
+
+* packer를 이용해 ami를 만들면 더 빠른 세팅
+
+* packer sample도 보면 인프라 구축 ㅇㅇ
+
+* ```
+  ansible-playbook -i aws the_red_2_geoip.yml                 
+  ```
+
+* on Premis 에서 사용하는 방식임
+
+* 
+
+
+
+
+
+TODO study
+
+* ansible이 뭐 해주는건가?
+* create_host.py.
+* base.yml? 머임
+* packer
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
