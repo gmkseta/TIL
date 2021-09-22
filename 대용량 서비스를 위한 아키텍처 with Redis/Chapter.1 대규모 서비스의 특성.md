@@ -4,8 +4,6 @@
 * 많은 사용자 데이터
 * 트래픽 / 데이터 빠른 증가
 
-### 
-
 스타트업에서 서비스의 인기가 좋아, 트래픽이 감당할 수 없을 정도로 늘어난다면? 며칠동안 서비스가 안된다면??
 
 ## 대규모 서비스가 가져야 할 특성
@@ -57,8 +55,6 @@
   * IaC로 생성한다. - cdk 도 취급 해주세요 ㅜㅜ
   * 특정 이미지를 모두 만들어 둘 수도 있고, Terraform으로 인프라를 구성한 후에 ansible로 필요한 설정을 할 수도 있다.
 
-  
-
 * 모니터링 - Monitoring
   * 서비스 상태는 항상 모니터링 되어야 한다.
 
@@ -66,19 +62,13 @@
 
 여러명이서 작업할때 state를 s3에 저장을 한다? 호우
 
-
-
 ```
 terraform init
 terraform plan -out "output"
 terraform apply "output"
 ```
 
-
-
 spot은 비용은 싸지만? - 한두시간 쓰면 사라질 수 있다.
-
-
 
 * terraform 에서 나온 public ip / private ip로 create_hosts.py 변경해서 실행
 
@@ -119,11 +109,6 @@ gunicorn으로 파이썬 어플리케이션을 띄워준다.
 
 * on Premis 에서 사용하는 방식임
 
-* 
-
-
-
-
 
 TODO study
 
@@ -131,10 +116,6 @@ TODO study
 * create_host.py.
 * base.yml? 머임
 * packer
-
-
-
-
 
 
 

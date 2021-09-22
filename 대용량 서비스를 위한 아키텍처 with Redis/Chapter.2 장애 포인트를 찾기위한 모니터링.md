@@ -20,8 +20,6 @@
 
 Design doc
 
-
-
 ## 실습
 
 ```shell
@@ -30,8 +28,6 @@ pyenv rehash
 ```
 
 로 그냥 같은 환경 사용 가능 
-
-
 
 ## 지표 수집과 모니터링 
 
@@ -76,14 +72,11 @@ pyenv rehash
 
 ### Grafana
 
-* Visualizationd을한다.
+* Visualization 을 한다.
 * AGPL 이라서 사용자에게 노출되면 서비스의 소스코드 노출
+* 꼭 데이터 소스가 Prometheus 일 필요는 없고 cloudwatch이런거 ㅇㅋ
 
 ### Sentry
-
-
-
-
 
 실제 모니터링은 Prometheus 
 
@@ -91,13 +84,58 @@ pyenv rehash
 
 - 같은 서버에 있으므로 internal ip로
 
-
-
 scrap/metrics  라는 endpoint로 접근하면 값을 반환하게 된다.
 
 
 
+## 성능 테스트
 
+* 성능 테스트
+  * 서비스가 어느 정도의 성능을 내는지를 알아보는 테스트
+* 부하 테스트
+  * 어느 부분에서 어느 정도 부하가 걸리는지
+* 스트레스 테스트
+  * 성능 / 부하 테스트가 특정 시간 이상 지속적으로 안정적으로 되는지 확인하는 테스트 
+
+### 주의점
+
+* 주요 시나리오를 테스트하나?
+  * 하나만 호출 X 실제 서비스에서 사용되는 패턴으로
+  * api마다 부하 종류가 다르다
+  * 여러 api 조합이 필요할지도
+* 클라이언트의 성능 한게를 확인한다.
+  * 부하를 주는 클라이언트의 한계로 인해서 성능 측정이 어려울 수 있으므로 , 클라이언트를 점점 늘리면서 테스트
+
+### 확인할 부분
+
+* OS에서 설정하는 값들에 대한 확인이 필요하다
+  * ulimit -a
+    * open files
+    * max user processes 라는 값의 튜닝
+  * /etc/limits.conf 수정
+  * 재시작 필요
+* ec2는 재시작 보다 ami에 기본 설정을 해두고 이용이 더 좋음
+
+### 툴
+
+* ngrinder
+* locust
+* jmeter
+* gatling
+* ab
+
+### Ngrinder
+
+* 평균 tps / 최대 tps / 성공 수, 실패 수 
+* 실패 수가 전체의 30%면 테스트 실패
+
+
+
+실습 - 
+
+테스트대상이 느려서 처리가 안되는 경우
+
+Agent의 한계가 걸려서 부하럴 더 못 주는 경우
 
 
 
@@ -105,4 +143,4 @@ scrap/metrics  라는 endpoint로 접근하면 값을 반환하게 된다.
 
 todo 
 
-OG 
+ansible 
