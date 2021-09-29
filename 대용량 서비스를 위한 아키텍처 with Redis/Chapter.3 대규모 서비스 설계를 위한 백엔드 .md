@@ -26,8 +26,6 @@ Caller는 LB의 주소만 알고 그 뒤의 상태는 모름 서버가 한 두 �
 * 장애포인트가 줄어든다.
 * 클라에서 서버 목록하고 주소를 관리해야하는 단점 - 만약 바뀌거나 추가/삭제 되면 ?
 
-
-
 ## LoadBalancer - 실습
 
 - /the_red.git 에서
@@ -54,9 +52,7 @@ elb를 통해서만 접근
 * DNS로 찾는다?
 * 클라이언트에서는 외부 dns로 우리 서버의 주소를 알게?
 * 내부 dns?에서도 ..
-* 서버가 죽었을 때 DNS TTL 동안은 ( ex 1분~ ) 어쨋든 서빙안되고 ..
-
-
+* 서버가 죽었을 때 DNS TTL 동안은 ( ex 1분~ ) 어쨋든 서빙안되고 
 
 ### Service Discovery
 
@@ -130,13 +126,13 @@ elb를 통해서만 접근
 
 * redis, pub/sub 등..
 
-  ### Feature Flag
+### Feature Flag
 
-  * 값이 바뀌었을 때 각 서버에 ..  
-  * 새로운 기능을 출시/배포 했을 때 마치 이 플래그로 기능 동작 여부놓는거처럼
-  * 재배포가 힘들면- 오래걸리면 이게 더 낫지.- 롤백 /재배포 하는거 시간 걸려서?
-  * 이게 서버의 응답을 바꾸는거면 클라쪽에서 에러날수도있고
-  * 클라이언트도..
+* 값이 바뀌었을 때 각 서버에 ..  
+* 새로운 기능을 출시/배포 했을 때 마치 이 플래그로 기능 동작 여부놓는거처럼
+* 재배포가 힘들면- 오래걸리면 이게 더 낫지.- 롤백 /재배포 하는거 시간 걸려서?
+* 이게 서버의 응답을 바꾸는거면 클라쪽에서 에러날수도있고
+* 클라이언트도..
 
 ## Service Discovery 실습
 
@@ -146,8 +142,6 @@ elb를 통해서만 접근
   - redis / dbms는 외부에서 모니터링 하고 zookeeper에 등록하는 형태의 agent가 필요
     - agent가 죽거나 하면 장애로 인지 ..할수도
   - Heartbeat 체크 30초 단위라 .. DNS TTL하고 동일한거 아닌가? 결국..
-
-
 
 ### chapter2 - service_discovery
 
@@ -161,17 +155,13 @@ ZK_SCRAP_PATH = "/the_red/services/scrap/nodes"
 
 round robind으로 caller에서 나눠서 보내나봄
 
-
-
 근데 그래서 뭐쓰라는거지 쩝
 
-
+Health Check를 DB로 하고있다.
 
 ## Circuit Breaker
 
 ![image](https://user-images.githubusercontent.com/72075148/134761730-b2645784-80b6-494d-aa35-a9368e9df134.png)
-
-
 
 * 만약 timeout이 300ms
 * 평소에 20ms 처리
@@ -182,8 +172,6 @@ round robind으로 caller에서 나눠서 보내나봄
 
 * A서비스가 장애가 나면 여기에 의존하는 B서비스도 점점 느려진다.
 * 결국 B에 의존하는 CDE도 결국 느려진다..
-
-
 
 ### 필수적인 API, 필수적이지 않은 API
 
@@ -214,8 +202,6 @@ api server가 콜 하면 circuit breacker가
 ![image](https://user-images.githubusercontent.com/72075148/134762006-dde32405-b45d-433c-a695-70a63edaf2b5.png)
 
 바로 리턴하므로 300ms 안걸림!
-
-
 
 기준 정해야함
 
@@ -354,15 +340,12 @@ redis를 서로 다른 conf/ port로 켜서 failover 실습
 * 뭐 근데 대부분 큰 문제는 안댐!
   * 서비스에 따라!
 * Replication Lag상태에서 데이터를 Cache하는 경우 문제가 오래 지속될지도.
-* 
 
 ### 실습은 별거 없는듯
 
 그냥 replication Aurora에서 자동으로 되는거 확인정도
 
-
-
-
+Internal external dns
 
 
 
