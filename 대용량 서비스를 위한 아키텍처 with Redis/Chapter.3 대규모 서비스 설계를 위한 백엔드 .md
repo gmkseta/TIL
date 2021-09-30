@@ -349,11 +349,336 @@ Internal external dns
 
 
 
+## 6. 샤딩 Sharding
+
+### State
+
+* 사라지지 않고 유지해야 하는 정보 - DB
+* 유지하지 않아도 되는 데이터
+  * Scrap 서버- , 데이터가 없으면 다시 접속해서 생성
+  * GeoIp서버도 호출 해서 결과를 가져올 수 있다.
+  * 쉽게 재생성 할 수 있는 데이터들을 Stateless한 데이터라고 한다.
+  * 실제 필요한 데이터를 DB에 저장하고, 비지니스 로직만 들고 있는 API 서버들은 대부분 stateless
+  * Stateless한 서버는 그냥 lb에 추가만 하면 됨 - 로직만 들고있어서!
+
+### State 서버의 확장은?
+
+* State를 저장하는 DB서버의 확장은 쉽지 않다. - scale up을 한다.
+* Query Off - 읽기 분산으로 부하를 분산하는 방법을 알아봤었지?
+* ![image](https://user-images.githubusercontent.com/72075148/135279454-98493e9e-049e-4895-bd1b-08e7981a97a7.png)
+* ![image](https://user-images.githubusercontent.com/72075148/135279491-c75dbff9-bb5a-44af-9272-8e8f3b35a733.png)
+* 계속 replica 장비를 추가하면? 
+* 쓰기 연산이 어쨋든 계속..어쩌구 .웅애
+* 더 좋은 장비를 쓰게된다ㅣ..,.
+
+## Partitioning
+
+### Vertical Partitioning
+
+* 테이블을 컬럼 기준으로 나눈다.
+* 자주 사용하는 컬럼과 자주사용하지 않는 컬럼을 나눠서 성능을 향상시킨다.
+  * 자주 안쓰는거 없어져서 테이블이 더 작은 사이즈를 차지하게된다.
+
+### Horizontal Partitioning
+
+* 같은 테이블을 데이터 기준으로 나눈다
+
+* 데이터의 개수가 적어지므로 하나의 디비에서 처리해야하는 부하가 줄어든다
+
+* Sharding이라고함
+
+* 여러대의 DB와 연결되어야하는 단점
+
+* 어떤 데이터를 어디에 저장하냐?
+
+* 
+
+  ##### Key를 처리하는 방법?
+
+  * Range 1~1000, 1001~2000
+    * 새로운 Shard를 추가하는게 쉬움
+    * 균등하지 못할수있음
+  * Modular
+    * 한대 추가되면 데이터의 이동이 심해진다
+    * 한번에 두배로 늘리면? 절반이 이동해서 ㄱㅊ함 
+      * 1%2 = 1 
+      * 2%2 = 0 
+      * 3%2 = 1 
+      * 4%2 = 0 
+      * 1%4 부터는 0,1,2,3으로 디면서 반반이동임
+    * 그럼 1대 2대 4대 8대 ;; 16대;;;;
+    * PreShard한다음 Scale-Up으로 가져감
+  * Indexed
+    * 특정 데이터 위치를 가리키는 서버가 존재
+    * 상태도 있음
+    * 분배를 원하는 형태로 하기 쉬움
+    * 걔가 하나의 서비스라서 SPOF가 될 수 있음
+    * 관리 포인트 증대
+    * 매번 질의해야함,
+    * 클라이언트가 위치를 요청했을 때 저장하는 방식으로 장애 완화함
+  * Complexed 
+    * 다 섞어 구현이 복잡해
+    * ![image-20210930023715653](/Users/seongjunkim/Library/Application Support/typora-user-images/image-20210930023715653.png)
+
+
+
+## 실습
+
+* zookeeper / redis 쓰나범
+
+* ```python
+  data = {
+      "0": {"host": "redis0:127.0.0.1:16379", "start": 0, "end": 1000},
+      "1": {"host": "redis1:127.0.0.1:16380", "start": 1000, "end": 2000},
+      "2": {"host": "redis2:127.0.0.1:16381", "start": 2000, "end": 3500},
+      "3": {"host": "redis3:127.0.0.1:16382", "start": 3500, "end": -1},
+  }
+  ```
+
+* -1  이면 키 더 큰거 그냥 다 
+
+* ![image](https://user-images.githubusercontent.com/72075148/135449160-37db4b90-ebc9-40a3-80fb-120eeb0f802d.png)
+
+* ![image](https://user-images.githubusercontent.com/72075148/135449206-71ecaf4f-a78f-4af3-9ef0-170ee2e0a081.png)
+
+* /api/v1/write_post/{usr_id}
+
+* /api/v1/posts/{usr_id}/{post_id}
+
+* /api/v1/posts/{usr_id}
+
+* user_id 기준으로 range shard
+
+* ```python
+  class RangeShardPolicy(ShardPolicy):
+      def __init__(self, infos):
+          length = len(infos) 
+  
+          current = infos[0]
+          if current.validate() == False:
+              raise Exception("RangeInfo is invalid")
+          
+          for i in range(1, length):
+              prev = infos[i-1]
+              current = infos[i]
+  
+              if current.validate() == False:
+                  raise Exception("RangeInfo is invalid")
+  
+              if prev.end != current.start:
+                  raise Exception("RangeInfo Order is invalid")
+  
+          self.infos = infos
+  
+  ```
+
+* 
 
 
 
 
 
+## Consistent Hashing
+
+* 서버 추가/삭제 시 리밸런싱이 계속 일어남 - sharding modular방식
+* 같은 해시를 사용하면 항상 같은 결과
+* 서버별로 해시를 적용한다?
+  * Rule을 정한다? - Hash의 값보다 크면서 가장 가까운 Hash값을 가진 서버에 자신의 데이터를 저장한다.
+  * ![image](https://user-images.githubusercontent.com/72075148/135321548-6d6b75fe-c182-4091-b1b5-cd3d494e55f9.png)
+  * 서버 장애가 발생하면 해시 링의 다음 서버에 모든 부하가 넘어간다. 따라서 부하에 안정적이지 않음
+* Virtual Node
+  * Hash에 + 해서?  가상 주소를 만들어서 에 매칭을 한다.
+  * ![image](https://user-images.githubusercontent.com/72075148/135321760-9462c1a3-bcc2-451e-a5c6-baeccacf1c2a.png)
+  * 균등해짐.
+* 서버 이름을 어떤 값을 서버의 Key로 사용해야할까?
+  * IP? DNS?? 
+  * 계속 사용할 수 있는 이름을 사용하면 링이 유지되지만 변경되는걸 쓰면 안됨 데이터 위치가 바뀜
+  * 유니크한 닉네임을 사용해라
+* ketema hash를 사용했음
+  * md5를 써서 느림
+* 그래서 murmurhash3
+* jump hash
+  * 고정된 값으러 매번 시드가 바뀌면 머시ㅣㄱ한거 말거
+  * 속도 빠른거>???
+
+
+
+## 실습
+
+* docker로 redis 4대 키고
+* redis를 닉네임으로 쓴다
+* ![image](https://user-images.githubusercontent.com/72075148/135451723-24d5dbd4-0f4a-4970-bb39-a72392983572.png)
+* ketama 해시를 만들어서 쓰고있고
+* 리플리카 
+
+# GUID
+
+* 메일서비스 설계해보자
+
+  * 가입
+  * 수신
+  * 리스트
+  * 상세
+
+* 가정
+
+  * 메일 정보는 각각 분리되어있다
+    * 사용자의 메일 수신 리스트
+    * 각 메일의 실제 파일 내용
+  * 한 계정의 메일 목록 정보는 모두 같은 DB안에 존재한다.
+    * 한 계정의 정보는 여러 DB로 샤딩되지 않는다.
+  * EML을 저장하는 부분은 AWS S3 같은 오브젝트 서비스를 사용함
+  * 메일 ID만 보고도 어떤 DB에 관련 정보가 있는지 알 수 있어야한다.
+
+  
+
+* 사용자 정보와 사용자 메일의 메타정보는 다르다
+
+  * 메일 정보 
+    * 발신자
+    * 타이틀
+    * 본문 등 
+  * 계정 정보
+    * 이메일
+    * 로그인 관련..
+
+* 2억명 사용자가 있다고 가정
+
+  * 각 유저는 1024Byte 데이터 사용
+  * 1024*2억 = 191GB
+  * 8:2법칙에 따라서 20프로 정도가 빈번하게 접근해도 38.2G
+  * 크게 샤딩이 되지 않더라도 샤딩 될 일이 없다.,
+  * 샤딩이 필요해도 Range 샤딩 정도로 충분함
+
+1. 메일 수신하는경우
+
+   * 디비에 대용량 파일을 넣으면 속도 몇메가 이런게 디비에 넣어야한다는게 착각 , 더 빠르다고 생각하는데 아님
+     * 경로랑 거기서 갖고오는게 성능이나 비용측면훨나음
+   * 수신받는 도메인은 하나만 ..
+   * EML ( 메일 내용 ) 은 DB가 아닌 다른 곳에 저장된다. S3
+   * 메일을 가져가는 방법은 일단 수신 받은 시간 순으로만 된다고 저장한다.
+     * Nosql - second index 써야하고 등 .. 제공해야하냐 고민
+     * 송신자 순 메일 제목순 은 고려 안한다.
+
+2. 메일이 1024바이트라면 
+
+   * 2억명의 유저가 메일 1000개씩 들고있다고 가정하면
+     * 191*1000 이므로 DB당 1테라 정도 스토리지면 190개의 샤드
+   * 2백만명이 1000개면
+     * 1.9 테라정도 스토리지 - 1TB씩 쓰면 2개의 샤드
+   * 즉 사용자의 데이터는 스토리지를 많이 사용함
+   * ![image](https://user-images.githubusercontent.com/72075148/135323567-5e7b2039-5d74-48f8-85a3-74e0b9414570.png)
+   * ![image](https://user-images.githubusercontent.com/72075148/135323749-2d808190-a063-48f4-9c8d-39becaaee815.png)
+   * EML저장을 위한 서비스 추가로 필요
+   * EML파일에 대한 key를 무엇으로 하나? 
+   * Uniq한 값을 만들어낼 수 있어야한다.
+   * {receiver_id}_{mail_id}
+     * mail_id 자체로는 나눠진 shard마다 중복 존재 가능함
+       * mail_id를 auto increment 로 쓰면 shard 전체에서 유일한 key가 아닌 db에서만 유일
+       * 그래서 저건 유니크하다? 그런가 진짜>?? 아 마자 어차피 샤딩해서 그 유저의 디비는 정해져있는거구나,.
+   * uuid로 유일성을 보장하는거로,
+     * 128bit , 36char 라서 좀 크다,...;
+     * 시간정보가 들어가지만 시간 순으로 정렬되지 않는다.
+   * 새로운 아이디가 필요하다
+     * 유일성을 보장해야한
+     * 용략을 적게 차지해야한다
+     * id만으로 시간의 순서나 생성 시간을 알 수 있어야한다
+     * 필요한 특정 정보를 담을 수 있어야한다.
+
+   ## Simple Key version
+
+   * 64bit - 8bytes
+   * Timestamp - 52bits + sequence - 12bits
+   * 기존 user_id를 생성되는 Key와 붙여서 사용하는 방법
+   * 62029324585984 >> 12 = 1515948385 
+   * 62029324585984 & 0xFFF=1024
+   * charsyam_62029324585984
+   * 생성 프로세스가 하나일 때만 유일성이 보장된다. - 타임 스템프 .. 프로세스 하나면 ..
+   * ![image](https://user-images.githubusercontent.com/72075148/135324850-0a064f65-9f4e-4419-864f-d0d3d59f62e4.png)
+   * worker ID 붙여서 . - 4bits으로 ? - 16대까진 ..
+   * key 생성 서버를 구축해야함
+   * key만 보고 shard를 알 순없나?
+   * ![image](https://user-images.githubusercontent.com/72075148/135325064-3f440ea3-95c2-45fe-84bb-190b2d51ac79.png)
+
+   * 그럼 개별 유저의 데이터 이동이 가능한가..?
+   * 샤드 정해진 크기만 쓰고, 유저간 샤드 재배치는 없다고 가정하는거임
+   * scaleup하는거로 하고, 빨리 찾는게 중요하는 그렇게 하는거로 ...
+   * 그냥 유저 id랑 메일 아이디로 하면 안대나 ..쩝  - eml에 저장할떄.흠
+     * 아 재배치가 어려워서 그런가?
+     * 같은 아이디면 옮길 때 어려워서 ? 새로 만들어야하니까 , .. 
+     * 글로벌하게 유니크한거로,
+
+### 실습
+
+* 데이터 sharding을 위해서 Key가 유일 할 필요가 있다, - db여러대쓰면 유일안하고, uuid는 유일하지만 키 사이즈가 큼
+* 유일성을 보장한다,.
+* 시간으로 정렬이 가능하다,
+* twitter의 snowflake방식을 제안
+* ![image](https://user-images.githubusercontent.com/72075148/135453653-70e2000b-c720-43c4-90ab-eb1a2ac9bfb6.png)
+* 현재시간부터임  지금부터 시간임?
+* datacenterid와 workerid가 중복되면 중볻괸 값이 발생할 수 있음
+* 저러면 오우
+* guid , guid_str두개 만들어서 쓴다?
+
+# 비동기큐
+
+* 바로 쓰면 부하가 늘어날 때 Latency가 늘어나고 처리량이 조절 안됨 - 
+* 오래걸리는거 - 디비 아니더라도 , 비동기로 후 처리
+* 큐에 넣고 워커들이 .. 인코딩 처리를 하고 .. 뭐 어쩌구
+* 유저는 응답 받고 안써졌으니까 흠좀무 하자나 - 이거 먼저 캐싱 처리하고 후처리한다?
+  * Write Back형태를 취한다.
+  * hotkey이슈가있다?
+* 작업 큐에 들어오는건 워커로 조절이 되는데 유저 수는 조절이 안되니까.
+* Redis를 이용한 Sidekiqm Jesquem Kafka같은거 쓸수있다.
+* 대규모 트래픽 발생하면 처리량을 조절하는 BackPressure로 동작
+* 작업 큐를 .. redis replicationㅇ쩌구 해서 ,, 안정적으로 ,
+
+### 실습
+
+* 사이드킥 - 레디스 기반의 큐
+* 
+
+## 배포
+
+* 일종의 무정지 배포
+* 서버를 내리고 올리고, 배포 끝나면 다시 LB에 추가
+* rolling update
+* 기존 서비스의 중지 - 이전 소스나 바이너리 복사, 서비스 재시작
+* 롤링 업데이트에서의 롤백은 배포랑 동일한 시간
+* 배포에 굉장히 많은 시간이 걸리면?
+* Blue set / Green set이 존재
+* 같은 양의 Green set을 준비 - 새로운 버전을 배포
+* Blue Green은 쉬운가?
+  * 같은 장비를 쉽게 준비할수있나
+    * cloud는 쉽지
+    * 온프로미스에서는 같은 양이 있어야하니까 .
+      * 사용하는 리소스의 제한 ,
+      * 한서버에 두개의 프로세스와 proxy를 실행
+      * 새로운 장비 수급 없이 배포 가능
+      * 리소스를 풀로 사용 못하니까 부하 많으면 배포시 장애가 발생,,,
+
+* Canary Deployment - 그 새인가바
+  * 새로 배포한 버전에 버그있으면 롤백해도 영향..
+  * 일부만 배포하고 확인하고 상태 점검 후 나중에
+  * 안드로이드 보면 퍼센트로 배포 가능한데 그런식>
+  * 한대만 배포하면? 로드밸런서에서... 다음 요청도 저기서 같은곳에서 받는게 맞니>?
+  * Canary에 접근하는 유저는 그 다음에도 거기로 가도록 Tag생성해서 다른 서버에서는 해당 유저는 특정 서버로 redirection되도록
+  * 모든 서버에 구현 후 특정 유저만 해당 기느 동작하도록
+  * 
+
+## 실습
+
+* 80포트로 바꾼다음에 돌리고, 
+* geoip 를 돌려
+* 그럼 80포트에서 접속 안되다가
+* lb로 접속하면 연결 됨
+* 7002로 배포 후
+* 7001 포트로 새로 배포 하고
+* nginx-  geoip_port를 변경해서 배포  - elb는 nginx 80번만 보고있음
+
+
+
+### AWS에서 bluegreen targetGroup변경, weigh 변경
 
 
 
