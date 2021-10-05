@@ -369,7 +369,7 @@ Internal external dns
 * ![image](https://user-images.githubusercontent.com/72075148/135279491-c75dbff9-bb5a-44af-9272-8e8f3b35a733.png)
 * 계속 replica 장비를 추가하면? 
 * 쓰기 연산이 어쨋든 계속..어쩌구 .웅애
-* 더 좋은 장비를 쓰게된다ㅣ..,.
+* 더 좋은 장비를 쓰게된다.
 
 ## Partitioning
 
@@ -391,7 +391,7 @@ Internal external dns
 
 * 어떤 데이터를 어디에 저장하냐?
 
-* 
+  
 
   ##### Key를 처리하는 방법?
 
@@ -473,10 +473,6 @@ Internal external dns
   ```
 
 * 
-
-
-
-
 
 ## Consistent Hashing
 
@@ -611,7 +607,7 @@ Internal external dns
 ### 실습
 
 * 데이터 sharding을 위해서 Key가 유일 할 필요가 있다, - db여러대쓰면 유일안하고, uuid는 유일하지만 키 사이즈가 큼
-* 유일성을 보장한다,.
+* 유일성을 보장한다.
 * 시간으로 정렬이 가능하다,
 * twitter의 snowflake방식을 제안
 * ![image](https://user-images.githubusercontent.com/72075148/135453653-70e2000b-c720-43c4-90ab-eb1a2ac9bfb6.png)
@@ -629,14 +625,13 @@ Internal external dns
   * Write Back형태를 취한다.
   * hotkey이슈가있다?
 * 작업 큐에 들어오는건 워커로 조절이 되는데 유저 수는 조절이 안되니까.
-* Redis를 이용한 Sidekiqm Jesquem Kafka같은거 쓸수있다.
+* Redis를 이용한 Sidekiq Jesquem Kafka같은거 쓸수있다.
 * 대규모 트래픽 발생하면 처리량을 조절하는 BackPressure로 동작
 * 작업 큐를 .. redis replicationㅇ쩌구 해서 ,, 안정적으로 ,
 
 ### 실습
 
 * 사이드킥 - 레디스 기반의 큐
-* 
 
 ## 배포
 
@@ -664,11 +659,10 @@ Internal external dns
   * 한대만 배포하면? 로드밸런서에서... 다음 요청도 저기서 같은곳에서 받는게 맞니>?
   * Canary에 접근하는 유저는 그 다음에도 거기로 가도록 Tag생성해서 다른 서버에서는 해당 유저는 특정 서버로 redirection되도록
   * 모든 서버에 구현 후 특정 유저만 해당 기느 동작하도록
-  * 
 
 ## 실습
 
-* 80포트로 바꾼다음에 돌리고, 
+* 80포트로 바꾼다음에 돌리고
 * geoip 를 돌려
 * 그럼 80포트에서 접속 안되다가
 * lb로 접속하면 연결 됨
@@ -676,9 +670,7 @@ Internal external dns
 * 7001 포트로 새로 배포 하고
 * nginx-  geoip_port를 변경해서 배포  - elb는 nginx 80번만 보고있음
 
-
-
-### AWS에서 bluegreen targetGroup변경, weigh 변경
+### AWS에서 bluegreen targetGroup변경, weight 변경
 
 
 
