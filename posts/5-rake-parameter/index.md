@@ -1,9 +1,9 @@
 ---
-title: '[짧] Rake Task 사용 시 parameter 사용'
-date: '2021-03-25'
-tags: ['Rails', '짧', '팁']
-cover: './img.png'
-
+title: "[짧] Rake Task 사용 시 parameter 사용"
+date: "2021-03-25"
+update: "2021-03-25"
+tags: ["Rails", "짧", "팁"]
+cover: "./img.png"
 ---
 
 Rake Task를 만들어서 사용할 때 파라미터를 사용하고 싶을때 찾아서 기록해놓은 내용이다.
@@ -20,7 +20,7 @@ end
 
 ```
 
-이렇게 작성해놓고 zsh에서 rake task 실행 시 
+이렇게 작성해놓고 zsh에서 rake task 실행 시
 
 ```zsh
 rake crawling:instagram[맛집]
@@ -28,7 +28,6 @@ zsh: no matches found: crawling:instagram[맛집]
 ```
 
 넵 안됩니다.
-
 
 ```zsh
 rake crawling:instagram\[맛집\]

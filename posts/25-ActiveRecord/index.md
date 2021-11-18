@@ -1,6 +1,8 @@
 ---
 title: "ActiveRecord"
 date: "2021-11-08"
+update: "2021-11-08"
+tags: []
 ---
 
 # ActiveRecord 패턴

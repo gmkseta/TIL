@@ -1,9 +1,9 @@
 ---
-title: '[짧] PG:ConnectionBad - could not connect to server: Connection refused'
-date: '2021-03-24'
-tags: ['Rails', 'Postgresql', 'mac', 'linux', '짧', '팁']
-cover: './img.jpeg'
-
+title: "[짧] PG:ConnectionBad - could not connect to server: Connection refused"
+date: "2021-03-24"
+update: "2021-03-24"
+tags: ["Rails", "Postgresql", "mac", "linux", "짧", "팁"]
+cover: "./img.jpeg"
 ---
 
 레일즈 - postgres를 사용할떄 자주 본 에러이다.
@@ -28,12 +28,12 @@ Is the server running on host "localhost" (::1) and accepting
 이미 pid파일이 있다면 postgres은 제대로 실행되지 못한다.
 
 ### 해결 방법
-1.  `/usr/local/var/postgres` 혹은 `/usr/var/postgres` 에서 `postmaster.pid` 가 존재하는지 확인 
-있다면 지운다 
-<br/>
-`rm postmaster.pid`
 
-2. postgresql을 재 실행 한다. 
-mac : `brew services restart postgresql`
-linux : `sudo service postgresql restart`
+1.  `/usr/local/var/postgres` 혹은 `/usr/var/postgres` 에서 `postmaster.pid` 가 존재하는지 확인
+    있다면 지운다
+    <br/>
+    `rm postmaster.pid`
 
+2.  postgresql을 재 실행 한다.
+    mac : `brew services restart postgresql`
+    linux : `sudo service postgresql restart`
