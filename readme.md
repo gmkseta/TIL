@@ -14,4 +14,4 @@
 | 소수구하기                | https://www.acmicpc.net/problem/1929                     | S2  | O       |
 | 랜선 자르기               | https://www.acmicpc.net/problem/1654                     | S3  | O       |
 | 스택수열                  | https://www.acmicpc.net/problem/1874                     | S3  | O       |
-| 프린터 큐                 | https://www.acmicpc.net/problem/1966                     | S3  |         |
+| 프린터 큐                 | https://www.acmicpc.net/problem/1966                     | S3  | O       |
