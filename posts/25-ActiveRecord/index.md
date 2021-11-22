@@ -1,5 +1,5 @@
 ---
-title: "ActiveRecord vs "
+title: "ActiveRecord"
 date: "2021-11-08"
 ---
 
@@ -18,12 +18,10 @@ date: "2021-11-08"
 >
 > 안타깜게도 개발자들은 이러한 데이터 구조를 마치 객체인 것 처럼 취급하여 비즈니스 규칙 메서드를 넣어둔다. 데이터 구조와 객체가 짬뽕 되기 때문에 어색하다.
 
-
-
 ## Rails에서의 ActiveRecord
 
-* 기본적인 사용법은 쉽고 널렸으니 패쓰.
-* 
+- 기본적인 사용법은 쉽고 널렸으니 패쓰.
+-
 
 https://karoldabrowski.com/blog/active-record-pattern-or-anti-pattern-overview/
 
