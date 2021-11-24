@@ -6,7 +6,7 @@
 
 | 문제          | 링크                                  | Lv         | Solved? |
 | ------------- | ------------------------------------- | ---------- | ------- |
-| 전구와 스위치 | https://www.acmicpc.net/problem/2138  | Silver I   |         |
+| 전구와 스위치 | https://www.acmicpc.net/problem/2138  | Silver I   | 세모    |
 | 동전 뒤집기   | https://www.acmicpc.net/problem/1285  | Gold I     |         |
 | 운동          | https://www.acmicpc.net/problem/1956  | Gold IV    |         |
 | 후위 표기식   | https://www.acmicpc.net/problem/1918  | Gold III   |         |
