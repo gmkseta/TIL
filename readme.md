@@ -11,8 +11,8 @@
 | 운동          | https://www.acmicpc.net/problem/1956  | Gold IV    | △       |
 | 후위 표기식   | https://www.acmicpc.net/problem/1918  | Gold III   |         |
 | 최대 힙       | https://www.acmicpc.net/problem/11279 | Silver II  |         |
-| 바이러스      | https://www.acmicpc.net/problem/2606  | Silver III |         |
-| 괄호          | https://www.acmicpc.net/problem/9012  | Silver IV  |         |
+| 바이러스      | https://www.acmicpc.net/problem/2606  | Silver III | O       |
+| 괄호          | https://www.acmicpc.net/problem/9012  | Silver IV  | O       |
 
 # 1주차
 
