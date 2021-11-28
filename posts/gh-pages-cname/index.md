@@ -43,13 +43,13 @@ jobs:
 
 ![](2021-11-28-23-48-18.png)
 
-# 문제
+## 문제
 
-## 배포할 때 마다 Custom Domain 설정이 사라진다...?
+### 배포할 때 마다 Custom Domain 설정이 사라진다...?
 
 
 
-# 원인을 찾아보자.
+## 원인을 찾아보자.
 
 - github docs를 찾아봤더니 다음과 같은 글이 나왔다.
 
@@ -64,15 +64,15 @@ jobs:
 
 ![](2021-11-28-23-58-26.png)
 
-### 설정에서 Custom Domain을 추가하면 CNAME 파일이 생성되어 설정한 Custom Domain이 들어간다.
+* 설정에서 Custom Domain을 추가하면 CNAME 파일이 생성되어 설정한 Custom Domain이 들어간다.
 
-### 하지만 gh-pages 브랜치는 배포용이어서 늘 강제푸시되는 브랜치이고....
+* 하지만 gh-pages 브랜치는 배포용이어서 늘 강제푸시되는 브랜치이고....
 
-### main 브랜치에서는 CNAME이 없어서 설정은 빠지고, 설정해도 gh-pages브랜치만 반영이 된 것
+* main 브랜치에서는 CNAME이 없어서 설정은 빠지고, 설정해도 gh-pages브랜치만 반영이 된 것
 
-# 해결
+## 해결
 
-## main branch에 CNAME 파일 하나 추가 - 끗
+* main branch에 CNAME 파일 하나 추가 - 끗
 
 
 
