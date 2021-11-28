@@ -2,6 +2,19 @@
 
 ### 매주 문제풀기잇
 
+# 3주차
+
+| 문제                         | 링크                                  | Lv       | Solved? |
+| ---------------------------- | ------------------------------------- | -------- | ------- |
+| 적록색약                     | https://www.acmicpc.net/problem/10026 | Gold V   |         |
+| DSLR                         | https://www.acmicpc.net/problem/9019  | Gold V   |         |
+| 이중 우선순위 큐             | https://www.acmicpc.net/problem/7662  | Gold V   |         |
+| AC                           | https://www.acmicpc.net/problem/5430  | Gold V   |         |
+| 합분해                       | https://www.acmicpc.net/problem/2225  | Gold V   |         |
+| 가장 긴 증가하는 부분 수열 2 | https://www.acmicpc.net/problem/12015 | Gold II  |         |
+| 2로 몇 번 나누어질까         | https://www.acmicpc.net/problem/1407  | Gold IV  |         |
+| 버블 소트                    | https://www.acmicpc.net/problem/1377  | Gold III |         |
+
 # 2주차
 
 | 문제          | 링크                                  | Lv         | Solved? |
@@ -10,7 +23,7 @@
 | 동전 뒤집기   | https://www.acmicpc.net/problem/1285  | Gold I     | △       |
 | 운동          | https://www.acmicpc.net/problem/1956  | Gold IV    | △       |
 | 후위 표기식   | https://www.acmicpc.net/problem/1918  | Gold III   |         |
-| 최대 힙       | https://www.acmicpc.net/problem/11279 | Silver II  |         |
+| 최대 힙       | https://www.acmicpc.net/problem/11279 | Silver II  | O       |
 | 바이러스      | https://www.acmicpc.net/problem/2606  | Silver III | O       |
 | 괄호          | https://www.acmicpc.net/problem/9012  | Silver IV  | O       |
 
