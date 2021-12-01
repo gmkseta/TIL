@@ -6,8 +6,8 @@
 
 | 문제                         | 링크                                  | Lv       | Solved? |
 | ---------------------------- | ------------------------------------- | -------- | ------- |
-| 적록색약                     | https://www.acmicpc.net/problem/10026 | Gold V   | ㅒ      |
-| DSLR                         | https://www.acmicpc.net/problem/9019  | Gold V   |         |
+| 적록색약                     | https://www.acmicpc.net/problem/10026 | Gold V   | O       |
+| DSLR                         | https://www.acmicpc.net/problem/9019  | Gold V   | O       |
 | 이중 우선순위 큐             | https://www.acmicpc.net/problem/7662  | Gold V   |         |
 | AC                           | https://www.acmicpc.net/problem/5430  | Gold V   |         |
 | 합분해                       | https://www.acmicpc.net/problem/2225  | Gold V   |         |
