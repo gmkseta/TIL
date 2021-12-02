@@ -1,4 +1,3 @@
-# import sys
 
 
 # A, B = list(map(int, sys.stdin.readline().split()))
@@ -25,7 +24,7 @@
 # for (x, y) in zip(dp.keys(), dp.values()):
 #     print(2**y, end=" ")
 
-# # print(*dp.values())
+# print(*dp.values())
 
 # # # 1+2^1*n = x
 
@@ -77,3 +76,14 @@
 
 
 # # def func(num):
+import sys
+A, B = list(map(int, sys.stdin.readline().split()))
+
+
+def f(n):
+    if n <= 1:
+        return n
+    return n//2 + 2*f(n//2) + n % 2
+
+
+print(f(B)-f(A-1))
