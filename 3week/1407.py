@@ -75,7 +75,7 @@
 # # # print(result)
 
 
-# # def func(num):
+# def func(num):
 import sys
 A, B = list(map(int, sys.stdin.readline().split()))
 
