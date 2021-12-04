@@ -1,5 +1,5 @@
 ---
-title: "[짧] Rake Task 사용 시 parameter 사용"
+title: "Rake Task 사용 시 parameter 사용"
 date: "2021-03-25"
 update: "2021-03-25"
 tags: ["Rails", "짧", "팁"]

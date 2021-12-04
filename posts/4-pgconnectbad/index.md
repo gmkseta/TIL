@@ -1,5 +1,5 @@
 ---
-title: "[짧] PG:ConnectionBad - could not connect to server: Connection refused"
+title: "PG:ConnectionBad - could not connect to server: Connection refused"
 date: "2021-03-24"
 update: "2021-03-24"
 tags: ["Rails", "Postgresql", "mac", "linux", "짧", "팁"]

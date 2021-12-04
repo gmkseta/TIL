@@ -1,11 +1,9 @@
 ---
-title: "[짧] gh-pages, custom domain(cname) 적용 안 될 때 (gatsby-gh-pages-action)"
+title: "gh-pages, custom domain(cname) 적용 안 될 때 (gatsby-gh-pages-action)"
 date: "2021-11-27"
 update: "2021-11-27"
 tags: ["짧", "팁", "gatsby", "github-action"]
 ---
-
-## gatsby-gh-pages-action, custom domain(cname) 적용 안 될 때
 
 새 블로그를 `gatsby-gh-pages-action` 으로 배포하고 있다.
 
@@ -47,8 +45,6 @@ jobs:
 
 ### 배포할 때 마다 Custom Domain 설정이 사라진다...?
 
-
-
 ## 원인을 찾아보자.
 
 - github docs를 찾아봤더니 다음과 같은 글이 나왔다.
@@ -60,21 +56,19 @@ jobs:
 
 ![](2021-11-28-23-55-30.png)
 
-* 배포를 위해 빌드된 파일들이 들어가 있고, 잘 보니 CNAME 파일이 있다.
+- 배포를 위해 빌드된 파일들이 들어가 있고, 잘 보니 CNAME 파일이 있다.
 
 ![](2021-11-28-23-58-26.png)
 
-* 설정에서 Custom Domain을 추가하면 CNAME 파일이 생성되어 설정한 Custom Domain이 들어간다.
+- 설정에서 Custom Domain을 추가하면 CNAME 파일이 생성되어 설정한 Custom Domain이 들어간다.
 
-* 하지만 gh-pages 브랜치는 배포용이어서 늘 강제푸시되는 브랜치이고....
+- 하지만 gh-pages 브랜치는 배포용이어서 늘 강제푸시되는 브랜치이고....
 
-* main 브랜치에서는 CNAME이 없어서 설정은 빠지고, 설정해도 gh-pages브랜치만 반영이 된 것
+- main 브랜치에서는 CNAME이 없어서 설정은 빠지고, 설정해도 gh-pages브랜치만 반영이 된 것
 
 ## 해결
 
-* main branch에 CNAME 파일 하나 추가 - 끗
-
-
+- main branch에 CNAME 파일 하나 추가 - 끗
 
 ## References
 
