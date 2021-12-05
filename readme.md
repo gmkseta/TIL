@@ -8,12 +8,12 @@
 | ---------------------------- | ------------------------------------- | -------- | ------- |
 | 적록색약                     | https://www.acmicpc.net/problem/10026 | Gold V   | O       |
 | DSLR                         | https://www.acmicpc.net/problem/9019  | Gold V   | O       |
-| 이중 우선순위 큐             | https://www.acmicpc.net/problem/7662  | Gold V   |         |
-| AC                           | https://www.acmicpc.net/problem/5430  | Gold V   |         |
-| 합분해                       | https://www.acmicpc.net/problem/2225  | Gold V   |         |
+| 이중 우선순위 큐             | https://www.acmicpc.net/problem/7662  | Gold V   | △       |
+| AC                           | https://www.acmicpc.net/problem/5430  | Gold V   | O       |
+| 합분해                       | https://www.acmicpc.net/problem/2225  | Gold V   | △       |
 | 가장 긴 증가하는 부분 수열 2 | https://www.acmicpc.net/problem/12015 | Gold II  | △       |
 | 2로 몇 번 나누어질까         | https://www.acmicpc.net/problem/1407  | Gold IV  | △       |
-| 버블 소트                    | https://www.acmicpc.net/problem/1377  | Gold III |         |
+| 버블 소트                    | https://www.acmicpc.net/problem/1377  | Gold III | △       |
 
 # 2주차
 
