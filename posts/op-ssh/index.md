@@ -12,14 +12,14 @@ tags: ["linux", "terminal"]
 
 라는 니즈에서 스크립트를 짜놓고 작년부터 썼는데 이제 글로 옮겨적기
 
-# 1password 란?
+## 1password 란?
 
 - 1password는 패스워드를 관리하는 프로그램이다.
 - 패스워드 및 각종 신용카드 정보나 민감한 개인 정보들을 관리하고 쉽게 사용할 수 있다.
 - mac, window, android, iphone, 크롬 확장프로그램, cli에서도 사용 가능하다.
 - 모든 사이트의 비밀번호를 다르게 사용해도 1password를 사용해서 auto complete를 할 수 있다.
 
-# Need to be installed - expect, op
+## Need to be installed - expect, op
 
 - 1password cli ( op ), jq, expect 가 설치되어있어야 한다.
 
@@ -36,7 +36,7 @@ tags: ["linux", "terminal"]
 
 - `brew install jq`
 
-# ssh-key 저장해두기
+## ssh-key 저장해두기
 
 1. 비밀번호를 굉장히 복잡하게 설정하거나 1password으로 만들어냅니다.
 
@@ -48,7 +48,7 @@ tags: ["linux", "terminal"]
 
 ![](2021-12-05-20-09-58.png)
 
-# script
+## script
 
 - 아래 스크립트를 아무 곳에나 잘 위치 시키고 ( 나는 `~/.custom/op_ssh.sh` 로 해뒀음)
 - 실행 권한을 준다.
@@ -83,7 +83,7 @@ fi
 
 ```
 
-# 사용
+## 사용
 
 - op cli 로그인을 한다.
 - 로그인 하고자하는 키의 경로를 매개변수로 두고 커맨드 실행
