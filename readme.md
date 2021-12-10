@@ -8,8 +8,8 @@
 | ----------- | ------------------------------------- | --------- | ------- |
 | 숨바꼭질 2  | https://www.acmicpc.net/problem/12851 | Gold V    | △       |
 | 평범한 배낭 | https://www.acmicpc.net/problem/12865 | Gold V    | △       |
-| Σ           | https://www.acmicpc.net/problem/13172 | Gold V    |         |
-| 숨바꼭질 3  | https://www.acmicpc.net/problem/13549 | Gold V    |         |
+| Σ           | https://www.acmicpc.net/problem/13172 | Gold V    | △       |
+| 숨바꼭질 3  | https://www.acmicpc.net/problem/13549 | Gold V    | O       |
 | 병든 나이트 | https://www.acmicpc.net/problem/1783  | Silver IV |         |
 | 최소공배수  | https://www.acmicpc.net/problem/1934  | Silver V  | △       |
 | 리모컨      | https://www.acmicpc.net/problem/1107  | Gold V    |         |
