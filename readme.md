@@ -13,7 +13,7 @@
 | 병든 나이트 | https://www.acmicpc.net/problem/1783  | Silver IV | O       |
 | 최소공배수  | https://www.acmicpc.net/problem/1934  | Silver V  | △       |
 | 리모컨      | https://www.acmicpc.net/problem/1107  | Gold V    | △       |
-| RGB거리 2   | https://www.acmicpc.net/problem/17404 | Gold IV   |         |
+| RGB거리 2   | https://www.acmicpc.net/problem/17404 | Gold IV   | △       |
 
 # 3주차
 
