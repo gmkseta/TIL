@@ -4,18 +4,19 @@
 
 # 5주차
 
-| 문제 | 링크 | Lv  | Solved? | 
-| ------------------------- | -------------------------------------------------------- | --- | ------- |
-| 숨바꼭질 4 | https://www.acmicpc.net/problem/13913 | Gold IV | |
-| 최소 힙 | https://www.acmicpc.net/problem/1927 | Silver I | |
-| 숨바꼭질 | https://www.acmicpc.net/problem/1697 | Silver I | |
-| 케빈 베이컨의 6단계 법칙 | https://www.acmicpc.net/problem/1389 | Silver I | |
-| 테트로미노 | https://www.acmicpc.net/problem/14500 | Gold V | |
-| 아기 상어 | https://www.acmicpc.net/problem/16236 | Gold IV | |
-| LCS 2 | https://www.acmicpc.net/problem/9252 | Gold V | |
-| N번째 큰 수 | https://www.acmicpc.net/problem/2075 | Gold V | |
-| 사다리 | https://www.acmicpc.net/problem/2022 | Silver I | |
-| 후위 표기식2 | https://www.acmicpc.net/problem/1935 | Silver III | |
+| 문제                     | 링크                                  | Lv         | Solved? |
+| ------------------------ | ------------------------------------- | ---------- | ------- |
+| 숨바꼭질 4               | https://www.acmicpc.net/problem/13913 | Gold IV    |         |
+| 최소 힙                  | https://www.acmicpc.net/problem/1927  | Silver I   |         |
+| 숨바꼭질                 | https://www.acmicpc.net/problem/1697  | Silver I   | O       |
+| 케빈 베이컨의 6단계 법칙 | https://www.acmicpc.net/problem/1389  | Silver I   |         |
+| 테트로미노               | https://www.acmicpc.net/problem/14500 | Gold V     |         |
+| 아기 상어                | https://www.acmicpc.net/problem/16236 | Gold IV    |         |
+| LCS 2                    | https://www.acmicpc.net/problem/9252  | Gold V     |         |
+| N번째 큰 수              | https://www.acmicpc.net/problem/2075  | Gold V     |         |
+| 사다리                   | https://www.acmicpc.net/problem/2022  | Silver I   |         |
+| 후위 표기식2             | https://www.acmicpc.net/problem/1935  | Silver III | O       |
+
 # 4주차
 
 | 문제        | 링크                                  | Lv        | Solved? |
