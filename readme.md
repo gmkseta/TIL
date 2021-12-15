@@ -13,7 +13,7 @@
 | 테트로미노               | https://www.acmicpc.net/problem/14500 | Gold V     |         |
 | 아기 상어                | https://www.acmicpc.net/problem/16236 | Gold IV    |         |
 | LCS 2                    | https://www.acmicpc.net/problem/9252  | Gold V     |         |
-| N번째 큰 수              | https://www.acmicpc.net/problem/2075  | Gold V     |         |
+| N번째 큰 수              | https://www.acmicpc.net/problem/2075  | Gold V     | △       |
 | 사다리                   | https://www.acmicpc.net/problem/2022  | Silver I   |         |
 | 후위 표기식2             | https://www.acmicpc.net/problem/1935  | Silver III | O       |
 
@@ -68,3 +68,15 @@
 | 랜선 자르기               | https://www.acmicpc.net/problem/1654                     | S3  | O       |
 | 스택수열                  | https://www.acmicpc.net/problem/1874                     | S3  | O       |
 | 프린터 큐                 | https://www.acmicpc.net/problem/1966                     | S3  | O       |
+
+| N size       | 허용 시간 복잡도 |
+| ------------ | ---------------- |
+| N< 11        | O(N!)            |
+| N<25         | O(2^N)           |
+| N<100        | O(N^4)           |
+| N<500        | O(N^3)           |
+| N<3000       | O(N^2\*logN)     |
+| N<5000       | O(N^2)           |
+| N<1,000,000  | O(N\*logN)       |
+| N<10,000,000 | O(N)             |
+| 그이상       | O(logN), O(1)    |
