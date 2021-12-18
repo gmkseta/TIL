@@ -7,11 +7,11 @@
 | 문제                     | 링크                                  | Lv         | Solved? |
 | ------------------------ | ------------------------------------- | ---------- | ------- |
 | 숨바꼭질 4               | https://www.acmicpc.net/problem/13913 | Gold IV    |         |
-| 최소 힙                  | https://www.acmicpc.net/problem/1927  | Silver I   |         |
+| 최소 힙                  | https://www.acmicpc.net/problem/1927  | Silver I   | O       |
 | 숨바꼭질                 | https://www.acmicpc.net/problem/1697  | Silver I   | O       |
-| 케빈 베이컨의 6단계 법칙 | https://www.acmicpc.net/problem/1389  | Silver I   |         |
+| 케빈 베이컨의 6단계 법칙 | https://www.acmicpc.net/problem/1389  | Silver I   | O       |
 | 테트로미노               | https://www.acmicpc.net/problem/14500 | Gold V     |         |
-| 아기 상어                | https://www.acmicpc.net/problem/16236 | Gold IV    |         |
+| 아기 상어                | https://www.acmicpc.net/problem/16236 | Gold IV    | O       |
 | LCS 2                    | https://www.acmicpc.net/problem/9252  | Gold V     |         |
 | N번째 큰 수              | https://www.acmicpc.net/problem/2075  | Gold V     | △       |
 | 사다리                   | https://www.acmicpc.net/problem/2022  | Silver I   | △       |
