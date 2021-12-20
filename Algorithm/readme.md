@@ -2,6 +2,18 @@
 
 ### 매주 문제풀기잇
 
+# 6주차
+
+| 문제            | 링크                                  | Lv         | Solved? |
+| --------------- | ------------------------------------- | ---------- | ------- |
+| 연구소          | https://www.acmicpc.net/problem/14502 | Gold V     |         |
+| 치킨 배달       | https://www.acmicpc.net/problem/15686 | Gold V     |         |
+| 이분 그래프     | https://www.acmicpc.net/problem/1707  | Gold IV    |         |
+| 백조의 호수     | https://www.acmicpc.net/problem/3197  | Platinum V |         |
+| 가운데를 말해요 | https://www.acmicpc.net/problem/1655  | Gold II    |         |
+| 과제            | https://www.acmicpc.net/problem/13904 | Gold III   |         |
+| 그룹 단어 체커  | https://www.acmicpc.net/problem/1316  | Silver V   |         |
+
 # 5주차
 
 | 문제                     | 링크                                  | Lv         | Solved? |
@@ -12,7 +24,7 @@
 | 케빈 베이컨의 6단계 법칙 | https://www.acmicpc.net/problem/1389  | Silver I   | O       |
 | 테트로미노               | https://www.acmicpc.net/problem/14500 | Gold V     | △       |
 | 아기 상어                | https://www.acmicpc.net/problem/16236 | Gold IV    | O       |
-| LCS 2                    | https://www.acmicpc.net/problem/9252  | Gold V     |         |
+| LCS 2                    | https://www.acmicpc.net/problem/9252  | Gold V     | △       |
 | N번째 큰 수              | https://www.acmicpc.net/problem/2075  | Gold V     | △       |
 | 사다리                   | https://www.acmicpc.net/problem/2022  | Silver I   | △       |
 | 후위 표기식2             | https://www.acmicpc.net/problem/1935  | Silver III | O       |
