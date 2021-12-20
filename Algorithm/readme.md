@@ -6,7 +6,7 @@
 
 | 문제                     | 링크                                  | Lv         | Solved? |
 | ------------------------ | ------------------------------------- | ---------- | ------- |
-| 숨바꼭질 4               | https://www.acmicpc.net/problem/13913 | Gold IV    |         |
+| 숨바꼭질 4               | https://www.acmicpc.net/problem/13913 | Gold IV    | O       |
 | 최소 힙                  | https://www.acmicpc.net/problem/1927  | Silver I   | O       |
 | 숨바꼭질                 | https://www.acmicpc.net/problem/1697  | Silver I   | O       |
 | 케빈 베이컨의 6단계 법칙 | https://www.acmicpc.net/problem/1389  | Silver I   | O       |
