@@ -12,7 +12,7 @@
 | 백조의 호수     | https://www.acmicpc.net/problem/3197  | Platinum V |         |
 | 가운데를 말해요 | https://www.acmicpc.net/problem/1655  | Gold II    |         |
 | 과제            | https://www.acmicpc.net/problem/13904 | Gold III   |         |
-| 그룹 단어 체커  | https://www.acmicpc.net/problem/1316  | Silver V   |         |
+| 그룹 단어 체커  | https://www.acmicpc.net/problem/1316  | Silver V   | O       |
 
 # 5주차
 
