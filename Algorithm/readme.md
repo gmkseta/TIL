@@ -11,7 +11,7 @@
 | 이분 그래프     | https://www.acmicpc.net/problem/1707  | Gold IV    |         |
 | 백조의 호수     | https://www.acmicpc.net/problem/3197  | Platinum V | △       |
 | 가운데를 말해요 | https://www.acmicpc.net/problem/1655  | Gold II    | O       |
-| 과제            | https://www.acmicpc.net/problem/13904 | Gold III   |         |
+| 과제            | https://www.acmicpc.net/problem/13904 | Gold III   | O       |
 | 그룹 단어 체커  | https://www.acmicpc.net/problem/1316  | Silver V   | O       |
 
 # 5주차
