@@ -2,13 +2,27 @@
 
 ### 매주 문제풀기잇
 
+
+
+# 7주차
+
+| 문제                         | 링크                                  | Lv         | Solved? |
+| ---------------------------- | ------------------------------------- | ---------- | ------- |
+| 파이프 옮기기 1              | https://www.acmicpc.net/problem/17070 | Gold V     |         |
+| 피보나치 함수                | https://www.acmicpc.net/problem/1003  | Silver III |         |
+| 신나는 함수 실행             | https://www.acmicpc.net/problem/9184  | Silver II  |         |
+| 다각형의 면적                | https://www.acmicpc.net/problem/2166  | Gold V     |         |
+| 01타일                       | https://www.acmicpc.net/problem/1904  | Silver III |         |
+| 가장 긴 증가하는 부분 수열 5 | https://www.acmicpc.net/problem/14003 | Platinum V |         |
+| 파도반 수열                  | https://www.acmicpc.net/problem/9461  | Silver III |         |
+
 # 6주차
 
 | 문제            | 링크                                  | Lv         | Solved? |
 | --------------- | ------------------------------------- | ---------- | ------- |
 | 연구소          | https://www.acmicpc.net/problem/14502 | Gold V     | O       |
 | 치킨 배달       | https://www.acmicpc.net/problem/15686 | Gold V     | O       |
-| 이분 그래프     | https://www.acmicpc.net/problem/1707  | Gold IV    |         |
+| 이분 그래프     | https://www.acmicpc.net/problem/1707  | Gold IV    | △       |
 | 백조의 호수     | https://www.acmicpc.net/problem/3197  | Platinum V | △       |
 | 가운데를 말해요 | https://www.acmicpc.net/problem/1655  | Gold II    | O       |
 | 과제            | https://www.acmicpc.net/problem/13904 | Gold III   | O       |
