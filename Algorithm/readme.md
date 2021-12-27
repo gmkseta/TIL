@@ -7,7 +7,7 @@
 | 문제            | 링크                                  | Lv         | Solved? |
 | --------------- | ------------------------------------- | ---------- | ------- |
 | 연구소          | https://www.acmicpc.net/problem/14502 | Gold V     | O       |
-| 치킨 배달       | https://www.acmicpc.net/problem/15686 | Gold V     |         |
+| 치킨 배달       | https://www.acmicpc.net/problem/15686 | Gold V     | O       |
 | 이분 그래프     | https://www.acmicpc.net/problem/1707  | Gold IV    |         |
 | 백조의 호수     | https://www.acmicpc.net/problem/3197  | Platinum V | △       |
 | 가운데를 말해요 | https://www.acmicpc.net/problem/1655  | Gold II    | O       |
