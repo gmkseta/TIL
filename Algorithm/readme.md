@@ -2,15 +2,13 @@
 
 ### 매주 문제풀기잇
 
-
-
 # 7주차
 
 | 문제                         | 링크                                  | Lv         | Solved? |
 | ---------------------------- | ------------------------------------- | ---------- | ------- |
 | 파이프 옮기기 1              | https://www.acmicpc.net/problem/17070 | Gold V     |         |
-| 피보나치 함수                | https://www.acmicpc.net/problem/1003  | Silver III |         |
-| 신나는 함수 실행             | https://www.acmicpc.net/problem/9184  | Silver II  |         |
+| 피보나치 함수                | https://www.acmicpc.net/problem/1003  | Silver III | O       |
+| 신나는 함수 실행             | https://www.acmicpc.net/problem/9184  | Silver II  | O       |
 | 다각형의 면적                | https://www.acmicpc.net/problem/2166  | Gold V     |         |
 | 01타일                       | https://www.acmicpc.net/problem/1904  | Silver III |         |
 | 가장 긴 증가하는 부분 수열 5 | https://www.acmicpc.net/problem/14003 | Platinum V |         |
