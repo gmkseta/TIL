@@ -6,7 +6,7 @@
 
 | 문제                         | 링크                                  | Lv         | Solved? |
 | ---------------------------- | ------------------------------------- | ---------- | ------- |
-| 파이프 옮기기 1              | https://www.acmicpc.net/problem/17070 | Gold V     |         |
+| 파이프 옮기기 1              | https://www.acmicpc.net/problem/17070 | Gold V     | △       |
 | 피보나치 함수                | https://www.acmicpc.net/problem/1003  | Silver III | O       |
 | 신나는 함수 실행             | https://www.acmicpc.net/problem/9184  | Silver II  | O       |
 | 다각형의 면적                | https://www.acmicpc.net/problem/2166  | Gold V     |         |
