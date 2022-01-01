@@ -2,3 +2,4 @@
 **/.cph
 .DS_Store
 .idea
+openai_api_key.txt
