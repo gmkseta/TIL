@@ -2,6 +2,21 @@
 
 ### 매주 문제풀기잇
 
+# 8주차
+
+| 문제 | 링크 | Lv  | Solved? | 
+| ------------------------- | -------------------------------------------------------- | --- | ------- |
+| 피보나치 수 3 | https://www.acmicpc.net/problem/2749 | Gold II | |
+| 미네랄 | https://www.acmicpc.net/problem/2933 | Gold II | |
+| 행렬 제곱 | https://www.acmicpc.net/problem/10830 | Gold IV | |
+| 이항 계수 3 | https://www.acmicpc.net/problem/11401 | Gold I | |
+| 외판원 순회 | https://www.acmicpc.net/problem/2098 | Gold I | |
+| 음악프로그램 | https://www.acmicpc.net/problem/2623 | Gold II | |
+| 1의 개수 세기 | https://www.acmicpc.net/problem/9527 | Gold II | |
+| 피리 부는 사나이 | https://www.acmicpc.net/problem/16724 | Gold II | |
+| 선분 그룹 | https://www.acmicpc.net/problem/2162 | Platinum V | |
+
+
 # 7주차
 
 | 문제                         | 링크                                  | Lv         | Solved? |
