@@ -33,4 +33,4 @@ end
 
 
 result_matrix = solution(matrix, B-1)
-puts result_matrix.map{|a| a.map().join(' ')}.join("\n")
+puts result_matrix.map{|a| a.map{|x| x%1000}.join(' ')}.join("\n")

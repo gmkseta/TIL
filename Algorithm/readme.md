@@ -2,13 +2,27 @@
 
 ### 매주 문제풀기잇
 
+
+
+# 9주차
+
+| 문제 | 링크 | Lv  | Solved? | 
+| ------------------------- | -------------------------------------------------------- | --- | ------- |
+| ATM | https://www.acmicpc.net/problem/11399 | Silver III | |
+| 패션왕 신해빈 | https://www.acmicpc.net/problem/9375 | Silver III | |
+| 1, 2, 3 더하기 | https://www.acmicpc.net/problem/9095 | Silver III | |
+| 색종이 만들기 | https://www.acmicpc.net/problem/2630 | Silver III | |
+| 게임 개발 | https://www.acmicpc.net/problem/1516 | Platinum V | |
+| 작업 | https://www.acmicpc.net/problem/2056 | Gold IV | |
+| 택배 | https://www.acmicpc.net/problem/1866 | Platinum V | |
+| 줄 세우기 | https://www.acmicpc.net/problem/2252 | Gold III | |
 # 8주차
 
 | 문제 | 링크 | Lv  | Solved? |
 | ------------------------- | -------------------------------------------------------- | --- |---------|
 | 피보나치 수 3 | https://www.acmicpc.net/problem/2749 | Gold II | △       |
 | 미네랄 | https://www.acmicpc.net/problem/2933 | Gold II | △       |
-| 행렬 제곱 | https://www.acmicpc.net/problem/10830 | Gold IV |         |
+| 행렬 제곱 | https://www.acmicpc.net/problem/10830 | Gold IV | △ |
 | 이항 계수 3 | https://www.acmicpc.net/problem/11401 | Gold I | △ |
 | 외판원 순회 | https://www.acmicpc.net/problem/2098 | Gold I |         |
 | 음악프로그램 | https://www.acmicpc.net/problem/2623 | Gold II |         |
