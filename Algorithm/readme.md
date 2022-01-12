@@ -6,11 +6,11 @@
 
 # 9주차
 
-| 문제 | 링크 | Lv  | Solved? | 
+| 문제 | 링크 | Lv  | Solved? |
 | ------------------------- | -------------------------------------------------------- | --- | ------- |
 | ATM | https://www.acmicpc.net/problem/11399 | Silver III | |
 | 패션왕 신해빈 | https://www.acmicpc.net/problem/9375 | Silver III | |
-| 1, 2, 3 더하기 | https://www.acmicpc.net/problem/9095 | Silver III | |
+| 1, 2, 3 더하기 | https://www.acmicpc.net/problem/9095 | Silver III | O |
 | 색종이 만들기 | https://www.acmicpc.net/problem/2630 | Silver III | |
 | 게임 개발 | https://www.acmicpc.net/problem/1516 | Platinum V | |
 | 작업 | https://www.acmicpc.net/problem/2056 | Gold IV | |
@@ -24,7 +24,7 @@
 | 미네랄 | https://www.acmicpc.net/problem/2933 | Gold II | △       |
 | 행렬 제곱 | https://www.acmicpc.net/problem/10830 | Gold IV | △ |
 | 이항 계수 3 | https://www.acmicpc.net/problem/11401 | Gold I | △ |
-| 외판원 순회 | https://www.acmicpc.net/problem/2098 | Gold I |         |
+| 외판원 순회 | https://www.acmicpc.net/problem/2098 | Gold I | △ |
 | 음악프로그램 | https://www.acmicpc.net/problem/2623 | Gold II |         |
 | 1의 개수 세기 | https://www.acmicpc.net/problem/9527 | Gold II | △       |
 | 피리 부는 사나이 | https://www.acmicpc.net/problem/16724 | Gold II |         |
