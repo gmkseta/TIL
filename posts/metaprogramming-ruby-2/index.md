@@ -1,5 +1,5 @@
 ---
-title: Metaprogramming Ruby - 2. The Object Model
+title: M Ruby - 2. The Object Model
 date: "2021-04-08"
 update: "2021-04-08"
 series: "Metaprogramming Ruby"

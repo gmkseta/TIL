@@ -1,5 +1,5 @@
 ---
-title: Metaprogramming Ruby - 1
+title: M Ruby - 1
 date: "2021-04-01"
 update: "2021-04-01"
 series: "Metaprogramming Ruby"
