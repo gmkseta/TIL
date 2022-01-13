@@ -181,56 +181,7 @@
 
 따라서, 인덱스를 생성할 때에는 트레이드 오프 관계에 놓여있는 요소들을 종합적으로 고려하여 생성해야합니다.
 
-## ACID
 
-ACID에 대해서 설명해주세요.
-
-ACID는 트랜잭션이 안전하게 수행된다는 것을 보장하기 위한 성질입니다.
-
-데이터의 유효성을 보장하기 위한 트랜잭션의 특징
-
-### Atomicity(원자성)
-
-- 트랜잭션의 연산은 모든 연산이 완벽히 수행되어야 하며, 한 연산이라도 실패하면 트랜잭션은 실패해야 합니다.
-- `모든 작업이 반영되거나 모두 롤백되는 특성`입니다.
-
-### Consistency(일관성)
-
-- 트랜잭션은 유효한 상태로만 변경될 수 있습니다.
-- 데이터는 `미리 정의된 규칙에서만 수정이 가능한 특성`을 의미합니다
-- 도메인, 외래키 관게 유지
-
-### Isolation(고립성)
-
-- 트랜잭션은 동시에 실행될 경우 다른 트랜잭션에 의해 영향을 받지 않고 독립적으로 실행되어야 합니다.
-- 두 개 이상의 트랜잭션이 동시에 발생할 때, 서로의 연산에 영향을 줄 수 없음
-- Lock으로 보장ㅃ
-
-### Durability(내구성)
-
-- 트랜잭션이 커밋된 이후에는 시스템 오류가 발생하더라도 커밋된 상태로 유지되는 것을 보장해야 합니다.
-  - 일반적으로 비휘발성 메모리에 데이터가 저장되는 것을 의미
-- 한번 반영(커밋)된 트랜젝션의 내용은 `영원히 적용`되는 특성을 의미합니다.
-
-```
-ACID(원자성, 일관성, 고립성, 지속성)는 데이터베이스 트랜잭션이 안전하게 수행된다는 것을 보장하기 위한 성질을 가리키는 약어이다.(Wiki ACID)
-
-트랜잭션이라는 것은 데이터베이스 내에 서 하나의 논리적 기능을 수행하기 위해 행해지는 한번에 사용도는 하나 이상의 쿼리를 모아 놓은 쪼갤 수 없는 작업의 논리적인 단위이다. 트랜젝션은 ACID를 만족해야한다. ACID는 원자성(Atomicity), 일관성(Consistency), 고립성(Isolation) 그리고 지속성(Durability)의 약자이다.
-
-원자성(Atomicity)
-
-트랜젝션은 분해가 불가능한 최소의 단위인 하나의 원자처럼 동작한다는 의미. 트랜젝션 내의 모든 연산들은 반드시 한꺼번에 완전하게 전체가 정상적으로 수행이 완료되거나 아니면 어떠한 연산도 수행되지 않은 all or noting.
-
-예를 들어 내가 티스토리 게시판에 글을 Post한다. 트랜잭션의 Atomicity가 보장 된다는 것은 티스토리 데이터 베이스에 성공적으로 저장되거나, 실패하거나 2가지 경우밖에 없다는 것이다. 글 내용의 절반만 저장되고 나머지는 저장안되는 경우를 없게 한다는 것이다.
-
-일관성(Consistency) 트랜잭션 작업이 시작되기 전에 데이터베이스 상태가 일관된 상태였다면 트랜잭션 작업이 종료된 후에도 일관성 있는 데이터베이스 상태를 유지해아한다. 예를 들어서 티스토리 게시판에 글을 쓰는데 제목의 글자 제한이 255자라고 하자. 트랜잭션이 일어나면 이러한 조건을 만족해야하는 것이다. 만약 이를 위반하는 트랜잭션이 있다면 거부해야한다.
-
-고립성(Isolation) 트랜잭션 작업 수행 중에는 다른 트랜잭션에 영향을 주어서도 안되고, 다른 트랜잭션들에 의해 간섭을 받아서도 안 된다는 것을 의미. 다른 트랜잭션의 영향을 받게 되면 영향을 주는 트랜잭션에 의해 자신의 동작이 달라 질 수 있기 때문에, 트랜젝션 자신은 고립된 상태에서 수행되어야 한다는 것을 의미. 즉 다수의 트랜잭션이 동시에 수행중인 상황에서 하나의 트랜잭션이 완료될 때까지는 현재 실행 중인 트랜잭션의 중간 수행결과를 다른 트랜잭션에서 보거나 참조 할 수 없다. 예를 들어서 모 커뮤니티의 자유게시판에 두 사람이 글을 거의 동시에 올린다고 하자. 그러면 두 트랜젝션에 충돌이 일어나서 User A의 제목이 저장되고 내용은 User B가 저장되는게 아니라 User A의 트랜잭션이 종료 되기 전까지 User B의 트랜젝션은 실행되지 않는 것을 말한다.
-
-지속성(Durablility) 일련의 데이터 조작(트렌젝션 조작)을 완료 하고 완료 통지를 사용자가 받는 시점에서 그 조작이 영구적이 되어 그 결과를 잃지 않는 것을 나타낸다. 시스템이 정상일 때 뿐 아니라 데이터베이스나 OS의 이상 종료, 즉 시스템 장애도 견딜 수 있다는 것을 말한다. MySQL을 포함해 많은 데이터베이스의 구현에서는 트랜젝션 조작을 하드 디스크에 로그로 기록하고 시스템에 이상이 발생하면 그 로그를 사용해 이상 발생 전까지 복원하는 것으로 지속성을 실현하고 있다.
-
-
-```
 
 ## 트랜잭션
 
@@ -718,6 +669,137 @@ Eventual Consistency는 이 Consistency를 보장해주지 못하기 때문에 �
 - 테이블의 집합이라는 의미로 MySQL은 database, PostgreSQL은 schema가 사용된다.
   - postgres는 db기준으로 접속을 하고, schema를 지정하지 않으면 public 기본 사용
   -
+
+### 데이터베이스 풀
+
+- Connection Pool
+  - 클라이언트의 요청에 따라 각 어플리케이션의 스레드에서 데이터베이스에 접근하기 위해서는 Connection이 필요하다.
+  - Connection pool은 이런 Connection을 여러 개 생성해 두어 저장해 놓은 **공간(캐시)**, 또는 이 공간의 Connection을 필요할 때 꺼내 쓰고 반환하는 **기법**을 말한다.
+    [![img](https://github.com/WeareSoft/tech-interview/raw/master/contents/images/db-img/db-connection-02.png)](https://github.com/WeareSoft/tech-interview/blob/master/contents/images/db-img/db-connection-02.png)
+- DB에 접근하는 단계
+  1. 웹 컨테이너가 실행되면서 DB와 연결된 Connection 객체들을 미리 생성하여 pool에 저장한다.
+  2. DB에 요청 시, pool에서 Connection 객체를 가져와 DB에 접근한다.
+  3. 처리가 끝나면 다시 pool에 반환한다. [![img](https://github.com/WeareSoft/tech-interview/raw/master/contents/images/db-img/db-connection-01.jpeg)](https://github.com/WeareSoft/tech-interview/blob/master/contents/images/db-img/db-connection-01.jpeg)
+- Connction이 부족하면?
+  - 모든 요청이 DB에 접근하고 있고 남은 Conncetion이 없다면, 해당 클라이언트는 대기 상태로 전환시키고 Pool에 Connection이 반환되면 대기 상태에 있는 클라이언트에게 순차적으로 제공된다.
+- 왜 사용할까?
+  - 매 연결마다 Connection 객체를 생성하고 소멸시키는 비용을 줄일 수 있다.
+  - 미리 생성된 Connection 객체를 사용하기 때문에, DB 접근 시간이 단축된다.
+  - DB에 접근하는 Connection의 수를 제한하여, 메모리와 DB에 걸리는 부하를 조정할 수 있다.
+- Thread Pool
+  - 비슷한 맥락으로 Thread pool이라는 개념도 있다.
+  - 이 역시 매 요청마다 요청을 처리할 Thread를 만드는것이 아닌, 미리 생성한 pool 내의 Thread를 소멸시키지 않고 재사용하여 효율적으로 자원을 활용하는 기법.
+- Thread Pool과 Connection pool
+  - WAS에서 Thread pool과 Connection pool내의 Thread와 Connection의 수는 직접적으로 메모리와 관련이 있기 때문에, 많이 사용하면 할 수록 메모리를 많이 점유하게 된다. 그렇다고 반대로 메모리를 위해 적게 지정한다면, 서버에서는 많은 요청을 처리하지 못하고 대기 할 수 밖에 없다.
+  - 보통 WAS의 Thread의 수가 Conncetion의 수보다 많은 것이 좋은데, 그 이유는 모든 요청이 DB에 접근하는 작업이 아니기 때문이다.
+
+#### B+tree 알고리즘
+
+[![img](https://github.com/WeareSoft/tech-interview/raw/master/contents/images/db-btree.png)](https://github.com/WeareSoft/tech-interview/blob/master/contents/images/db-btree.png)
+
+- 실제 데이터가 저장된 리프노드(Leaf nodes)
+- 리프노드까지의 경로 역할을 하는 논리프노드(Non-leaf nodes)
+- 경로의 출발점이 되는 루트 노드(Root node)
+
+B+tree는 리프노드에 이르기까지에 대한 자식 노드에 포인터가 저장되어 있다. 즉, B+트리의 검색은 루트노드에서 어떤 리프 노드에 이르는 한 개의 경로만 검색하면 되므로 매우 효율적이다.
+
+##### B+tree 사용 이유
+
+- 왜 index 생성 시 b-tree를 사용하는지? hash table이 더 효율적이지 않은지?
+  - SELECT 질의 조건에는 부등호 연산(<>)도 포함
+  - hash table은 동등 연산에 특화된 자료구조이기 때문에 부등호 연산 사용 시 문제 발생
+
+#### 주의할 점
+
+- 인덱스는 따로 테이블의 형태로 관리가 된다. 자원을 소모한다는 의미. 때문에 무분별한 인덱스의 사용은 성능에 부정적인 영향을 미칠 수 있다.
+- 또한 인덱스는 이진트리를 사용하기 때문에 기본적으로 정렬되어 있다. 이로인해 검색과 조회의 속도를 향상시킬 수 있지만 잦은 데이터의 변경(삽입, 수정 삭제)가 된다면 인덱스 데이블을 변경과 정렬에 드는 오버헤드 때문에 오히려 성능 저하가 일어날 수 있다.
+  - INSERT : 테이블에는 입력 순서대로 저장되지만, 인덱스 테이블에는 정렬하여 저장하기 때문에 성능 저하 발생
+  - DELETE : 테이블에서만 삭제되고 인덱스 테이블에는 남아있어 쿼리 수행 속도 저하
+  - UPDATE : 인덱스에는 UPDATE가 없기 때문에 DELETE, INSERT 두 작업 수행하여 부하 발생
+- 데이터의 중복이 높은 컬럼(카디널리티가 낮은 컬럼)은 인덱스로 만들어도 무용지물 (예: 성별)
+- 다중 컬럼 인덱싱할 때 카디널리티가 높은 컬럼->낮은 컬럼 순으로 인덱싱해야 효율적
+
+- [victolee - [DB이론\] 인덱스(Index)](https://victorydntmd.tistory.com/319)
+- [Nathan - DB 성능을 위한 Index](https://brunch.co.kr/@skeks463/25)
+- [인덱스 기본 원리](http://wiki.gurubee.net/pages/viewpage.action?pageId=26745270)
+
+
+
+### 파티셔닝
+
+- 배경
+
+  - 서비스의 크기가 점점 커지고 DB에 저장하는 데이터의 규모 또한 대용량화 되면서, 기존에 사용하는 DB 시스템의 **용량(storage)의 한계와 성능(performance)의 저하** 를 가져오게 되었다.
+  - 즉, VLDB(Very Large DBMS)와 같이 하나의 DBMS에 너무 큰 table이 들어가면서 용량과 성능 측면에서 많은 이슈가 발생하게 되었고, 이런 이슈를 해결하기 위한 방법으로 table을 '파티션(partition)'이라는 작은 단위로 나누어 관리하는 **'파티셔닝(Partitioning)'기법** 이 나타나게 되었다.
+
+- 파티셔닝의 개념
+
+  - 큰 table이나 index를, 관리하기 쉬운 partition이라는 작은 단위로 물리적으로 분할하는 것을 의미한다.
+    - 물리적인 데이터 분할이 있더라도, DB에 접근하는 application의 입장에서는 이를 인식하지 못한다.
+  - '파티셔닝(Partitioning)'기법을 통해 소프트웨어적으로 데이터베이스를 분산 처리하여 성능이 저하되는 것을 방지하고 관리를 보다 수월하게 할 수 있게 되었다.
+
+- 파티셔닝의 목적
+
+  1. 성능(Performance)
+     - 특정 DML과 Query의 성능을 향상시킨다.
+     - 주로 대용량 Data WRITE 환경에서 효율적이다.
+     - 특히, Full Scan에서 데이터 Access의 범위를 줄여 성능 향상을 가져온다.
+     - 많은 INSERT가 있는 OLTP 시스템에서 INSERT 작업을 작은 단위인 partition들로 분산시켜 경합을 줄인다.
+  2. 가용성(Availability)
+     - 물리적인 파티셔닝으로 인해 전체 데이터의 훼손 가능성이 줄어들고 데이터 가용성이 향상된다.
+     - 각 분할 영역(partition별로)을 독립적으로 백업하고 복구할 수 있다.
+     - table의 partition 단위로 Disk I/O을 분산하여 경합을 줄이기 때문에 UPDATE 성능을 향상시킨다.
+  3. 관리용이성(Manageability)
+     - 큰 table들을 제거하여 관리를 쉽게 해준다.
+
+- 파티셔닝의 장점
+
+  - 관리적 측면 : partition 단위 백업, 추가, 삭제, 변경
+    - 전체 데이터를 손실할 가능성이 줄어들어 데이터 가용성이 향상된다.
+    - partition별로 백업 및 복구가 가능하다.
+    - partition 단위로 I/O 분산이 가능하여 UPDATE 성능을 향상시킨다.
+  - 성능적 측면 : partition 단위 조회 및 DML수행
+    - 데이터 전체 검색 시 필요한 부분만 탐색해 성능이 증가한다.
+    - 즉, Full Scan에서 데이터 Access의 범위를 줄여 성능 향상을 가져온다.
+    - 필요한 데이터만 빠르게 조회할 수 있기 때문에 쿼리 자체가 가볍다.
+
+- 파티셔닝의 단점
+
+  - table간 JOIN에 대한 비용이 증가한다.
+  - table과 index를 별도로 파티셔닝할 수 없다.
+    - table과 index를 같이 파티셔닝해야 한다.
+
+- 파티셔닝의 종류
+
+  1. 수평(horizontal) 파티셔닝
+     - **샤딩(Sharding)** 과 동일한 개념
+  2. 수직(vertical) 파티셔닝
+
+  ![img](https://github.com/WeareSoft/tech-interview/raw/master/contents/images/types-of-partitioning.png)
+
+- 파티셔닝의 분할 기준
+
+  1. 범위 분할 (range partitioning)
+  2. 목록 분할 (list partitioning)
+  3. 해시 분할 (hash partitioning)
+  4. 합성 분할 (composite partitioning)
+
+  ![img](https://github.com/WeareSoft/tech-interview/raw/master/contents/images/partitioning.png)
+
+> ⏫[Top](https://github.com/WeareSoft/tech-interview/blob/master/contents/db.md#4-database) ↩️[Back](https://github.com/WeareSoft/tech-interview#4-database) ℹ️[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+>
+> - https://gmlwjd9405.github.io/2018/09/24/db-partitioning.html
+> - https://nesoy.github.io/articles/2018-02/Database-Partitioning
+
+### 샤딩
+
+> ⏫[Top](https://github.com/WeareSoft/tech-interview/blob/master/contents/db.md#4-database) ↩️[Back](https://github.com/WeareSoft/tech-interview#4-database) ℹ️[Home](https://github.com/WeareSoft/tech-interview#tech-interview)
+>
+> - http://mongodb.citsoft.net/?page_id=225#comment-91922
+> - https://d2.naver.com/helloworld/14822
+> - http://tech.kakao.com/2016/07/01/adt-mysql-shard-rebalancing/
+
+
 
 https://github.com/gyoogle/tech-interview-for-developer/tree/master/Computer%20Science/Database
 
