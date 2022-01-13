@@ -3,6 +3,7 @@ title: "1password + ssh key password"
 date: "2021-12-05"
 update: "2021-12-05"
 tags: ["linux", "terminal"]
+visibility: false
 ---
 
 - ssh key를 비밀번호 없이 사용하는 경우가 많았다. 혹은 항상 쓰던 비밀번호를 썼다.
@@ -90,11 +91,8 @@ fi
 
 ![](2021-12-05-20-31-19.png)
 
-
-
 ## next?
 
 1. gist 올려두고 자동화
 
 2. 1password 비밀번호 입력도 불편하다, touch id로 안 되나?
-
