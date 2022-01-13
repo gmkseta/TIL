@@ -3,7 +3,7 @@ title: "HTTPS 와 SSL - 2"
 date: "2021-12-19"
 update: "2021-12-19"
 tags: ["cs"]
-series: "https"
+visibility: false
 ---
 
 * 이전 글에서 HTTPS와 HTTP의 차이에 대해 알아봤다.

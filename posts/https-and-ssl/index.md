@@ -3,7 +3,7 @@ title: "HTTPS 와 SSL"
 date: "2021-12-12"
 update: "2021-12-12"
 tags: ["cs"]
-series: "https"
+visibility: false
 ---
 
 - https에 대해서 certbot 혹은 aws acm으로 SSL 인증서를 적용 시키는 것 외에 제대로 된 개념을 알고있지 못했다.
