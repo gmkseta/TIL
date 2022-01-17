@@ -11,11 +11,11 @@
 | ATM | https://www.acmicpc.net/problem/11399 | Silver III | O |
 | 패션왕 신해빈 | https://www.acmicpc.net/problem/9375 | Silver III | O |
 | 1, 2, 3 더하기 | https://www.acmicpc.net/problem/9095 | Silver III | O |
-| 색종이 만들기 | https://www.acmicpc.net/problem/2630 | Silver III | |
-| 게임 개발 | https://www.acmicpc.net/problem/1516 | Platinum V | |
+| 색종이 만들기 | https://www.acmicpc.net/problem/2630 | Silver III | O |
+| 게임 개발 | https://www.acmicpc.net/problem/1516 | Gold III | O |
 | 작업 | https://www.acmicpc.net/problem/2056 | Gold IV | △|
 | 택배 | https://www.acmicpc.net/problem/1866 | Platinum V | |
-| 줄 세우기 | https://www.acmicpc.net/problem/2252 | Gold III | |
+| 줄 세우기 | https://www.acmicpc.net/problem/2252 | Gold III | O |
 # 8주차
 
 | 문제 | 링크 | Lv  | Solved? |
