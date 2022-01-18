@@ -2,6 +2,19 @@
 
 ### 매주 문제풀기잇
 
+# 10주차
+
+| 문제 | 링크 | Lv  | Solved? | 
+| ------------------------- | -------------------------------------------------------- | --- | ------- |
+| 촌수계산 | https://www.acmicpc.net/problem/2644 | Silver II | |
+| 단지번호붙이기 | https://www.acmicpc.net/problem/2667 | Silver I | |
+| 미로 탐색 | https://www.acmicpc.net/problem/2178 | Silver I | |
+| DFS와 BFS | https://www.acmicpc.net/problem/1260 | Silver II | |
+| 편의점 2 | https://www.acmicpc.net/problem/14400 | Silver II | |
+| Wifi Setup | https://www.acmicpc.net/problem/5864 | Gold IV | |
+| 행렬 곱셈 순서 | https://www.acmicpc.net/problem/11049 | Gold III | |
+| Dance Dance Revolution | https://www.acmicpc.net/problem/2342 | Gold III | |
+| 앱 | https://www.acmicpc.net/problem/7579 | Gold III | |
 
 
 # 9주차
@@ -14,7 +27,7 @@
 | 색종이 만들기 | https://www.acmicpc.net/problem/2630 | Silver III | O |
 | 게임 개발 | https://www.acmicpc.net/problem/1516 | Gold III | O |
 | 작업 | https://www.acmicpc.net/problem/2056 | Gold IV | △|
-| 택배 | https://www.acmicpc.net/problem/1866 | Platinum V | |
+| 택배 | https://www.acmicpc.net/problem/1866 | Platinum V | △ |
 | 줄 세우기 | https://www.acmicpc.net/problem/2252 | Gold III | O |
 # 8주차
 
