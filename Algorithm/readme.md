@@ -4,10 +4,10 @@
 
 # 10주차
 
-| 문제 | 링크 | Lv  | Solved? | 
+| 문제 | 링크 | Lv  | Solved? |
 | ------------------------- | -------------------------------------------------------- | --- | ------- |
-| 촌수계산 | https://www.acmicpc.net/problem/2644 | Silver II | |
-| 단지번호붙이기 | https://www.acmicpc.net/problem/2667 | Silver I | |
+| 촌수계산 | https://www.acmicpc.net/problem/2644 | Silver II | O |
+| 단지번호붙이기 | https://www.acmicpc.net/problem/2667 | Silver I | O |
 | 미로 탐색 | https://www.acmicpc.net/problem/2178 | Silver I | |
 | DFS와 BFS | https://www.acmicpc.net/problem/1260 | Silver II | |
 | 편의점 2 | https://www.acmicpc.net/problem/14400 | Silver II | |

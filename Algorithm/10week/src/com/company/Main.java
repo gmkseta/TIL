@@ -1,9 +1,27 @@
 package com.company;
 
-
+import java.io.*;
 import java.util.ArrayList;
 
-public class Solution2667 {
+public class Main {
+    static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // 입력
+    static final BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); // 출력
+
+    public static void main(String[] args) throws IOException {
+        int n = Integer.parseInt(br.readLine());
+        int[][] arr = new int[n][n];
+        for(int i = 0; i < n; i++) {
+            String[] str = br.readLine().split("");
+            for(int j = 0; j < n; j++) {
+                arr[i][j] = Integer.parseInt(str[j]);
+            }
+        }
+        int[] answer = solution(n, arr);
+        for(int i=0; i < answer.length; i++) {
+            System.out.println(answer[i]);
+        }
+
+    }
     public static int[] solution(int n, int[][] map){
         int[][] direction = {{0,1},{0,-1},{1,0},{-1,0}};
         int[][] visited = new int[n][n];
@@ -39,8 +57,12 @@ public class Solution2667 {
             }
         }
 
+        answer.sort(Integer::compareTo);
         answer.add(0, answer.size());
 
         return answer.stream().mapToInt(i->i).toArray();
     }
+    
+    
+
 }
