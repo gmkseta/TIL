@@ -8,12 +8,12 @@
 | ------------------------- | -------------------------------------------------------- | --- | ------- |
 | 촌수계산 | https://www.acmicpc.net/problem/2644 | Silver II | O |
 | 단지번호붙이기 | https://www.acmicpc.net/problem/2667 | Silver I | O |
-| 미로 탐색 | https://www.acmicpc.net/problem/2178 | Silver I | |
-| DFS와 BFS | https://www.acmicpc.net/problem/1260 | Silver II | |
-| 편의점 2 | https://www.acmicpc.net/problem/14400 | Silver II | |
+| 미로 탐색 | https://www.acmicpc.net/problem/2178 | Silver I | O |
+| DFS와 BFS | https://www.acmicpc.net/problem/1260 | Silver II | O |
+| 편의점 2 | https://www.acmicpc.net/problem/14400 | Silver II | △ |
 | Wifi Setup | https://www.acmicpc.net/problem/5864 | Gold IV | |
 | 행렬 곱셈 순서 | https://www.acmicpc.net/problem/11049 | Gold III | |
-| Dance Dance Revolution | https://www.acmicpc.net/problem/2342 | Gold III | |
+| Dance Dance Revolution | https://www.acmicpc.net/problem/2342 | Gold III | △ |
 | 앱 | https://www.acmicpc.net/problem/7579 | Gold III | |
 
 
