@@ -1,68 +1,52 @@
-package boj.sol6064;
+package boj.sol1992;
 
 
 import java.io.*;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
     static FastReader scan = new FastReader();
     static StringBuilder sb = new StringBuilder();
-    static int T;
-    static int[][] arr;
+    static int N;
+    static int[][] board;
 
     public static void main(String[] args) {
         input();
-        solution();
+        sb.append(rec_func(0, 0, N));
         System.out.println(sb.toString());
     }
 
-    static void solution() {
-        for (int i = 0; i < T; i++) {
-            int m = arr[i][0];
-            int n = arr[i][1];
-            int x = arr[i][2];
-            int y = arr[i][3];
-            int cnt = x % (m + 1);
-            int tempY = x;
-            for (int j = 0; j < n; j++) {
-                int ty = tempY % n == 0 ? n : tempY % n;
-                if (ty == y) {
-                    break;
-                }
 
-                tempY = ty + m;
-                cnt += m;
+    static String rec_func(int x, int y, int k) {
+        if (k == 1) {
+            return board[x][y] + "";
+        } else {
+            String left_top = rec_func(x, y, k / 2);
+            String right_top = rec_func(x, y + k / 2, k / 2);
+            String left_bottom = rec_func(x + k / 2, y, k / 2);
+            String right_bottom = rec_func(x + k / 2, y + k / 2, k / 2);
+            if (left_top.equals(right_top) &&
+                    left_top.equals(left_bottom) &&
+                    left_top.equals(right_bottom) &&
+                    (left_top.equals("1") || left_top.equals("0"))) {
+                return left_top;
+            } else {
+                return "(" + left_top + right_top + left_bottom + right_bottom + ")";
             }
-            sb.append(cnt > lcm(m, n) ? "-1" : cnt);
-            sb.append("\n");
         }
-
     }
 
 
     static void input() {
-        T = scan.nextInt();
-        arr = new int[T][4];
-        for (int t = 0; t < T; t++) {
-            arr[t][0] = scan.nextInt();
-            arr[t][1] = scan.nextInt();
-            arr[t][2] = scan.nextInt();
-            arr[t][3] = scan.nextInt();
+        N = scan.nextInt();
+        board = new int[N][N];
+        for (int i = 0; i < N; i++) {
+            String line = scan.next();
+            for (int j = 0; j < N; j++) {
+                board[i][j] = line.charAt(j) - '0';
+            }
         }
-    }
-
-    static int gcd(int a, int b) {
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
-        }
-        return a;
-    }
-
-    static int lcm(int a, int b) {
-        return a * b / gcd(a, b);
     }
 
     static class FastReader {
