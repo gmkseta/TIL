@@ -8,7 +8,7 @@
 | ------------------------- | -------------------------------------------------------- | --- | ------- |
 | 카잉 달력 | https://www.acmicpc.net/problem/6064 | Silver I | △ |
 | 쿼드트리 | https://www.acmicpc.net/problem/1992 | Silver I | O |
-| 토마토 | https://www.acmicpc.net/problem/7576 | Gold V | |
+| 토마토 | https://www.acmicpc.net/problem/7576 | Gold V | O |
 | 토마토 | https://www.acmicpc.net/problem/7569 | Gold V | |
 | 로봇 청소기 | https://www.acmicpc.net/problem/14503 | Gold V | |
 | 맥주 마시면서 걸어가기 | https://www.acmicpc.net/problem/9205 | Silver I | |
