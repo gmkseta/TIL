@@ -2,6 +2,17 @@
 
 ### 매주 문제풀기잇
 
+# 12주차
+
+| 문제 | 링크 | Lv  | Solved? | 
+| ------------------------- | -------------------------------------------------------- | --- | ------- |
+| 포도주 시식 | https://www.acmicpc.net/problem/2156 | Silver I | |
+| 연속합 | https://www.acmicpc.net/problem/1912 | Silver II | |
+| 스티커 | https://www.acmicpc.net/problem/9465 | Silver I | |
+| 계단 오르기 | https://www.acmicpc.net/problem/2579 | Silver III | |
+| 파일 합치기 | https://www.acmicpc.net/problem/11066 | Gold III | |
+| 플로이드 | https://www.acmicpc.net/problem/11404 | Gold IV | |
+| 별자리 만들기 | https://www.acmicpc.net/problem/4386 | Gold IV | |
 # 11주차
 
 | 문제 | 링크 | Lv  | Solved? |
@@ -9,11 +20,11 @@
 | 카잉 달력 | https://www.acmicpc.net/problem/6064 | Silver I | △ |
 | 쿼드트리 | https://www.acmicpc.net/problem/1992 | Silver I | O |
 | 토마토 | https://www.acmicpc.net/problem/7576 | Gold V | O |
-| 토마토 | https://www.acmicpc.net/problem/7569 | Gold V | |
-| 로봇 청소기 | https://www.acmicpc.net/problem/14503 | Gold V | |
-| 맥주 마시면서 걸어가기 | https://www.acmicpc.net/problem/9205 | Silver I | |
-| 빙산 | https://www.acmicpc.net/problem/2573 | Gold IV | |
-| 안전 영역 | https://www.acmicpc.net/problem/2468 | Silver I | |
+| 토마토 | https://www.acmicpc.net/problem/7569 | Gold V | O |
+| 로봇 청소기 | https://www.acmicpc.net/problem/14503 | Gold V | O |
+| 맥주 마시면서 걸어가기 | https://www.acmicpc.net/problem/9205 | Silver I | △ |
+| 빙산 | https://www.acmicpc.net/problem/2573 | Gold IV | △ |
+| 안전 영역 | https://www.acmicpc.net/problem/2468 | Silver I | O |
 | 스타트링크 | https://www.acmicpc.net/problem/5014 | Gold V | |
 
 # 10주차
