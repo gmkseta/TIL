@@ -25,7 +25,7 @@
 | 맥주 마시면서 걸어가기 | https://www.acmicpc.net/problem/9205 | Silver I | △ |
 | 빙산 | https://www.acmicpc.net/problem/2573 | Gold IV | △ |
 | 안전 영역 | https://www.acmicpc.net/problem/2468 | Silver I | O |
-| 스타트링크 | https://www.acmicpc.net/problem/5014 | Gold V | |
+| 스타트링크 | https://www.acmicpc.net/problem/5014 | Gold V | O |
 
 # 10주차
 
