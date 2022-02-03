@@ -4,9 +4,9 @@
 
 # 12주차
 
-| 문제 | 링크 | Lv  | Solved? | 
+| 문제 | 링크 | Lv  | Solved? |
 | ------------------------- | -------------------------------------------------------- | --- | ------- |
-| 포도주 시식 | https://www.acmicpc.net/problem/2156 | Silver I | |
+| 포도주 시식 | https://www.acmicpc.net/problem/2156 | Silver I | O |
 | 연속합 | https://www.acmicpc.net/problem/1912 | Silver II | |
 | 스티커 | https://www.acmicpc.net/problem/9465 | Silver I | |
 | 계단 오르기 | https://www.acmicpc.net/problem/2579 | Silver III | |
