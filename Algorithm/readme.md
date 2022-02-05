@@ -7,9 +7,9 @@
 | 문제 | 링크 | Lv  | Solved? |
 | ------------------------- | -------------------------------------------------------- | --- | ------- |
 | 포도주 시식 | https://www.acmicpc.net/problem/2156 | Silver I | O |
-| 연속합 | https://www.acmicpc.net/problem/1912 | Silver II | |
-| 스티커 | https://www.acmicpc.net/problem/9465 | Silver I | |
-| 계단 오르기 | https://www.acmicpc.net/problem/2579 | Silver III | |
+| 연속합 | https://www.acmicpc.net/problem/1912 | Silver II | O |
+| 스티커 | https://www.acmicpc.net/problem/9465 | Silver I | O |
+| 계단 오르기 | https://www.acmicpc.net/problem/2579 | Silver III | O |
 | 파일 합치기 | https://www.acmicpc.net/problem/11066 | Gold III | |
 | 플로이드 | https://www.acmicpc.net/problem/11404 | Gold IV | |
 | 별자리 만들기 | https://www.acmicpc.net/problem/4386 | Gold IV | |
