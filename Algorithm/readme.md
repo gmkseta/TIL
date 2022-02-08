@@ -2,6 +2,18 @@
 
 ### 매주 문제풀기잇
 
+# 13주차
+
+| 문제 | 링크 | Lv  | Solved? |
+| ------------------------- | -------------------------------------------------------- | --- | ------- |
+| 가장 긴 바이토닉 부분 수열 | https://www.acmicpc.net/problem/11054 | Gold III | |
+| 동전 1 | https://www.acmicpc.net/problem/2293 | Gold V | |
+| LCS | https://www.acmicpc.net/problem/9251 | Gold V | |
+| 카드 구매하기 | https://www.acmicpc.net/problem/11052 | Silver I | |
+| 퇴사 | https://www.acmicpc.net/problem/14501 | Silver III | |
+| 2×n 타일링 2 | https://www.acmicpc.net/problem/11727 | Silver III | |
+| 이친수 | https://www.acmicpc.net/problem/2193 | Silver III | O |
+| 쉬운 계단 수 | https://www.acmicpc.net/problem/10844 | Silver I | △ |
 # 12주차
 
 | 문제 | 링크 | Lv  | Solved? |
