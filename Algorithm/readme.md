@@ -11,7 +11,7 @@
 | LCS | https://www.acmicpc.net/problem/9251 | Gold V | |
 | 카드 구매하기 | https://www.acmicpc.net/problem/11052 | Silver I | |
 | 퇴사 | https://www.acmicpc.net/problem/14501 | Silver III | |
-| 2×n 타일링 2 | https://www.acmicpc.net/problem/11727 | Silver III | |
+| 2×n 타일링 2 | https://www.acmicpc.net/problem/11727 | Silver III | O |
 | 이친수 | https://www.acmicpc.net/problem/2193 | Silver III | O |
 | 쉬운 계단 수 | https://www.acmicpc.net/problem/10844 | Silver I | △ |
 # 12주차
