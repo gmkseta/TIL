@@ -2,12 +2,24 @@
 
 ### 매주 문제풀기잇
 
+# 14주차
+
+| 문제 | 링크 | Lv  | Solved? |
+| ------------------------- | -------------------------------------------------------- | --- | ------- |
+| 별자리 만들기 | https://www.acmicpc.net/problem/4386 | Gold IV | |
+| 가장 긴 감소하는 부분 수열 | https://www.acmicpc.net/problem/11722 | Silver II | O |
+| 도시 분할 계획 | https://www.acmicpc.net/problem/1647 | Gold IV | |
+| 제곱수의 합 | https://www.acmicpc.net/problem/1699 | Silver III | |
+| 네트워크 연결 | https://www.acmicpc.net/problem/1922 | Gold IV | |
+| 가장 큰 증가 부분 수열 | https://www.acmicpc.net/problem/11055 | Silver II | |
+| 최소 스패닝 트리 | https://www.acmicpc.net/problem/1197 | Gold IV | |
+| 오르막 수 | https://www.acmicpc.net/problem/11057 | Silver I | |
 # 13주차
 
 | 문제 | 링크 | Lv  | Solved? |
 | ------------------------- | -------------------------------------------------------- | --- | ------- |
 | 가장 긴 바이토닉 부분 수열 | https://www.acmicpc.net/problem/11054 | Gold III | |
-| 동전 1 | https://www.acmicpc.net/problem/2293 | Gold V | |
+| 동전 1 | https://www.acmicpc.net/problem/2293 | Gold V | △ |
 | LCS | https://www.acmicpc.net/problem/9251 | Gold V | △ |
 | 카드 구매하기 | https://www.acmicpc.net/problem/11052 | Silver I | △ |
 | 퇴사 | https://www.acmicpc.net/problem/14501 | Silver III | O |
