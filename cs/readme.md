@@ -7,16 +7,24 @@
 
 ##### Easy
 
-- https://github.com/tvandame/back-end-developer-interview-questions/blob/master/Translations/Korean/README_KR.md
 - https://github.com/gyoogle/tech-interview-for-developer
+
 - https://github.com/WooVictory/Ready-For-Tech-Interview
+
 - https://github.com/qkraudghgh/coding-interview
+
 - https://github.com/JaeYeopHan/Interview_Question_for_Beginner
+
 - https://github.com/KNU-CS-Study/Tech-Interview
+
 - https://github.com/WeareSoft/tech-interview
+
 - https://github.com/huisam/interview
+
 - https://github.com/brave-people/brave-tech-interview
+
 - https://github.com/yoonje/developer-interview-questions-and-answers
+
 - https://github.com/ksundong/backend-interview-question
 
 ##### Medium
