@@ -11,9 +11,10 @@
 | 도시 분할 계획 | https://www.acmicpc.net/problem/1647 | Gold IV | |
 | 제곱수의 합 | https://www.acmicpc.net/problem/1699 | Silver III | |
 | 네트워크 연결 | https://www.acmicpc.net/problem/1922 | Gold IV | |
-| 가장 큰 증가 부분 수열 | https://www.acmicpc.net/problem/11055 | Silver II | |
+| 가장 큰 증가 부분 수열 | https://www.acmicpc.net/problem/11055 | Silver II | O |
 | 최소 스패닝 트리 | https://www.acmicpc.net/problem/1197 | Gold IV | |
 | 오르막 수 | https://www.acmicpc.net/problem/11057 | Silver I | |
+
 # 13주차
 
 | 문제 | 링크 | Lv  | Solved? |
@@ -26,6 +27,7 @@
 | 2×n 타일링 2 | https://www.acmicpc.net/problem/11727 | Silver III | O |
 | 이친수 | https://www.acmicpc.net/problem/2193 | Silver III | O |
 | 쉬운 계단 수 | https://www.acmicpc.net/problem/10844 | Silver I | △ |
+
 # 12주차
 
 | 문제 | 링크 | Lv  | Solved? |
@@ -37,6 +39,7 @@
 | 파일 합치기 | https://www.acmicpc.net/problem/11066 | Gold III | |
 | 플로이드 | https://www.acmicpc.net/problem/11404 | Gold IV | O |
 | 별자리 만들기 | https://www.acmicpc.net/problem/4386 | Gold IV | △ |
+
 # 11주차
 
 | 문제 | 링크 | Lv  | Solved? |
@@ -65,7 +68,6 @@
 | Dance Dance Revolution | https://www.acmicpc.net/problem/2342 | Gold III | △ |
 | 앱 | https://www.acmicpc.net/problem/7579 | Gold III | |
 
-
 # 9주차
 
 | 문제 | 링크 | Lv  | Solved? |
@@ -78,6 +80,7 @@
 | 작업 | https://www.acmicpc.net/problem/2056 | Gold IV | △|
 | 택배 | https://www.acmicpc.net/problem/1866 | Platinum V | △ |
 | 줄 세우기 | https://www.acmicpc.net/problem/2252 | Gold III | O |
+
 # 8주차
 
 | 문제 | 링크 | Lv  | Solved? |
@@ -91,7 +94,6 @@
 | 1의 개수 세기 | https://www.acmicpc.net/problem/9527 | Gold II | △       |
 | 피리 부는 사나이 | https://www.acmicpc.net/problem/16724 | Gold II | △ |
 | 선분 그룹 | https://www.acmicpc.net/problem/2162 | Platinum V |         |
-
 
 # 7주차
 
@@ -195,3 +197,14 @@
 | N<1,000,000  | O(N\*logN)       |
 | N<10,000,000 | O(N)             |
 | 그이상       | O(logN), O(1)    |
+
+```python
+import sys
+
+input = sys.stdin.readline
+
+M, N = list(map(int, input().split()))
+n = int(input())
+input().rstrip()
+
+```
