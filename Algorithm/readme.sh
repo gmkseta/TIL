@@ -18,12 +18,15 @@ while [ "$input" != "exit" ]; do
   else
     boj_link="https://www.acmicpc.net/problem/$input"
     echo "문제 링크: $boj_link"
-    title=$(curl -s -N "$boj_link" | sed -n "s/^.*<title>\(.*\)<\/title>.*$/\1/p")
-    title=${title#*: }
-    sovled_link="https://solved.ac/search?query=$input"
+#    title=$(curl -s -N "$boj_link" | sed -n "s/^.*<title>\(.*\)<\/title>.*$/\1/p")
+#    title=${title#*: }
+    solved_link="https://solved.ac/search?query=$input"
 
     # get tier from solved link parsing from html , img tag who has class like 'TierBadge__Tier'
-    tier=$(curl -s -N https://solved.ac/search\?query\=$input | sed -n 's/.*alt="\(.*\)" class="TierBadge__Tier.*>/\1/p')
+    solved_html=$(curl -s -N "$solved_link")
+    tier=$(echo $solved_html | sed -n 's/.*alt="\(.*\)" class="TierBadge__Tier.*>/\1/p')
+
+    title=$(echo $solved_html | sed -n 's/.*titleKo":"\(.*\)","isSolvable.*/\1/p')
 
     echo $tier
 

@@ -2,18 +2,28 @@
 
 ### 매주 문제풀기잇
 
+| 문제 | 링크 | Lv  | Solved? | 
+| ------------------------- | -------------------------------------------------------- | --- | ------- |
+| 동전 1 | https://www.acmicpc.net/problem/2293 | Gold V | |
+| 사회망 서비스(SNS) | https://www.acmicpc.net/problem/2533 | Gold III | |
+| 양팔저울 | https://www.acmicpc.net/problem/2629 | Gold III | |
+| 공통 부분 문자열 | https://www.acmicpc.net/problem/5582 | Gold V | |
+| 팰린드롬? | https://www.acmicpc.net/problem/10942 | Gold III | |
+| 동전 | https://www.acmicpc.net/problem/9084 | Gold V | |
+| 내리막 길 | https://www.acmicpc.net/problem/1520 | Gold IV | |
+
 # 14주차
 
 | 문제 | 링크 | Lv  | Solved? |
 | ------------------------- | -------------------------------------------------------- | --- | ------- |
-| 별자리 만들기 | https://www.acmicpc.net/problem/4386 | Gold IV | |
+| 별자리 만들기 | https://www.acmicpc.net/problem/4386 | Gold IV | △|
 | 가장 긴 감소하는 부분 수열 | https://www.acmicpc.net/problem/11722 | Silver II | O |
-| 도시 분할 계획 | https://www.acmicpc.net/problem/1647 | Gold IV | |
-| 제곱수의 합 | https://www.acmicpc.net/problem/1699 | Silver III | |
-| 네트워크 연결 | https://www.acmicpc.net/problem/1922 | Gold IV | |
+| 도시 분할 계획 | https://www.acmicpc.net/problem/1647 | Gold IV |△ |
+| 제곱수의 합 | https://www.acmicpc.net/problem/1699 | Silver III |△ |
+| 네트워크 연결 | https://www.acmicpc.net/problem/1922 | Gold IV | △|
 | 가장 큰 증가 부분 수열 | https://www.acmicpc.net/problem/11055 | Silver II | O |
-| 최소 스패닝 트리 | https://www.acmicpc.net/problem/1197 | Gold IV | |
-| 오르막 수 | https://www.acmicpc.net/problem/11057 | Silver I | |
+| 최소 스패닝 트리 | https://www.acmicpc.net/problem/1197 | Gold IV | △|
+| 오르막 수 | https://www.acmicpc.net/problem/11057 | Silver I | △|
 
 # 13주차
 
